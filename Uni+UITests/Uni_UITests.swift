@@ -29,6 +29,28 @@ class Uni_UITests: XCTestCase {
     }
     
     func testExample() {
+        
+        let app = XCUIApplication()
+        app.buttons["GO!"].tap()
+        
+        let tablesQuery = app.tables
+        tablesQuery.children(matching: .cell).element(boundBy: 1).children(matching: .staticText).element.tap()
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons["Timetable"].tap()
+        
+        let calendarButton = tabBarsQuery.buttons["Calendar"]
+        calendarButton.tap()
+        calendarButton.tap()
+        
+        let notesButton = tabBarsQuery.buttons["Notes"]
+        notesButton.tap()
+        calendarButton.tap()
+        app.collectionViews.children(matching: .cell).element(boundBy: 32).staticTexts["2"].swipeUp()
+        notesButton.tap()
+        tablesQuery.staticTexts["You can edit however you want "].tap()
+        
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
