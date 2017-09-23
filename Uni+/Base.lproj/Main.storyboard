@@ -864,12 +864,37 @@
                     <view key="view" contentMode="scaleToFill" id="aXr-ie-tMY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DsH-Ob-rYi">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IIc-Yh-aML">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IIc-Yh-aML" id="jL3-m3-LSL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="DsH-Ob-rYi" firstAttribute="top" secondItem="aXr-ie-tMY" secondAttribute="top" id="LyM-RY-jVJ"/>
+                            <constraint firstAttribute="bottom" secondItem="DsH-Ob-rYi" secondAttribute="bottom" id="QPj-vp-FhA"/>
+                            <constraint firstItem="DsH-Ob-rYi" firstAttribute="leading" secondItem="aXr-ie-tMY" secondAttribute="leading" id="nBN-um-OZS"/>
+                            <constraint firstAttribute="trailing" secondItem="DsH-Ob-rYi" secondAttribute="trailing" id="rU3-Un-xLt"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="detailTable" destination="DsH-Ob-rYi" id="U58-UL-xuc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fg1-C1-bPW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3888" y="1602"/>
+            <point key="canvasLocation" x="3886.9565217391309" y="1601.9021739130435"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="P5o-KC-Kgf">
@@ -946,7 +971,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3172.4637681159425" y="350.54347826086962"/>
+            <point key="canvasLocation" x="3126" y="351"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
