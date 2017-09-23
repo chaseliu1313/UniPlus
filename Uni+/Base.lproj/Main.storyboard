@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wkP-SP-Ww8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wkP-SP-Ww8">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -851,12 +851,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afb-Sf-3Ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5857.971014492754" y="917.93478260869574"/>
+            <point key="canvasLocation" x="5009" y="918"/>
         </scene>
-        <!--View Controller-->
+        <!--Split Detail View Controller-->
         <scene sceneID="yc2-f5-yHH">
             <objects>
-                <viewController id="ktK-9G-ARb" sceneMemberID="viewController">
+                <viewController id="ktK-9G-ARb" customClass="SplitDetailViewController" customModule="Uni_" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pj0-Dz-xHn"/>
                         <viewControllerLayoutGuide type="bottom" id="ZHp-gW-zCM"/>
@@ -874,7 +874,7 @@
         <!--Calendar-->
         <scene sceneID="P5o-KC-Kgf">
             <objects>
-                <splitViewController id="iQi-j2-gUc" sceneMemberID="viewController">
+                <splitViewController id="iQi-j2-gUc" customClass="SplitViewController" customModule="Uni_" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="QsF-NR-uoz"/>
                     <connections>
                         <segue destination="qXa-6x-hEP" kind="relationship" relationship="masterViewController" id="Jdz-RP-vCv"/>
@@ -883,7 +883,7 @@
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ODt-Pg-N9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="1343"/>
+            <point key="canvasLocation" x="2745" y="1560"/>
         </scene>
         <!--Timetable-->
         <scene sceneID="wg7-f3-ORb">

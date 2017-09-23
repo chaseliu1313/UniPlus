@@ -9,7 +9,7 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController{
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var calenaerView: JTAppleCalendarView!
@@ -20,7 +20,7 @@ class CalendarViewController: UIViewController {
     
    
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    
+    private var collapseMaster = true
    
     
     
@@ -34,25 +34,29 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    
+        
+        
+    
+       //setting navigation bar button and function
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         let addB = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addDate))
         
-        
         self.navigationItem.rightBarButtonItem = addB
         
-        let adT = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addDate))
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationItem.rightBarButtonItem = adT
+        
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         
         detailTable.backgroundColor = UIColor.clear
         UITableViewCell.appearance().backgroundColor = UIColor.clear
+        splitViewController?.delegate = self
         
+        //open sidemenu
         sideMenu()
-        
+        //setupcalendarViewUI
         setupCalendarView()
         
     }
@@ -60,21 +64,10 @@ class CalendarViewController: UIViewController {
     func setupCalendarView(){
         calenaerView.minimumLineSpacing = 0
         calenaerView.minimumInteritemSpacing = 0
-    }
-    
-    func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
-        guard let vaildCell = view as? CustomCell else {
-            return
+        calenaerView.visibleDates { (dates) in
+          self.setupInitialInfo(data: dates)
         }
-        if cellState.dateBelongsTo == .thisMonth{
-            vaildCell.dateLabel.textColor = monthColor
-        }else{
-            vaildCell.dateLabel.textColor = outsideMonthColor
-        }
-        
     }
-
-    
     
     
     override func didReceiveMemoryWarning() {
@@ -126,11 +119,25 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
         let endDate = formatter.date(from:"2017 12 31")!
         
         let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
+        self.calenaerView.scrollingMode = ScrollingMode.stopAtEachCalendarFrameWidth
+        
         return parameter
     }
 }
 extension CalendarViewController: JTAppleCalendarViewDelegate{
     
+    func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
+        guard let vaildCell = view as? CustomCell else {
+            return
+        }
+        if cellState.dateBelongsTo == .thisMonth{
+            vaildCell.dateLabel.textColor = monthColor
+        }else{
+            vaildCell.dateLabel.textColor = outsideMonthColor
+        }
+        
+    }
+
     
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         
@@ -148,6 +155,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
         return cell
     }
+    
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState){
         guard let vaildCell = cell as? CustomCell else {
             return
@@ -167,6 +175,13 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
     }
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo){
+        
+        self.setupInitialInfo(data: visibleDates)
+        
+    }
+    
+    func setupInitialInfo(data visibleDates: DateSegmentInfo) {
+    
         let date = visibleDates.monthDates.first!.date
         formatter.dateFormat = "yyyy"
         
@@ -174,15 +189,24 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
         formatter.dateFormat = "MMMM"
         month.text = formatter.string(from: date)
+
         
-        
+    
     }
     
-    //open side menu
-   
+    
     
     
 }
 
+extension CalendarViewController : UISplitViewControllerDelegate {
+    
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        return true
+    }
+    
+    
+}
 
 
