@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import FAPanels
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

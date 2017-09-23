@@ -88,7 +88,31 @@ class CalendarViewController: UIViewController {
     }
     
     
+    func sideMenu()
+    {
+        
+        if revealViewController() != nil{
+            
+            menuButton.target = self.revealViewController()
+            
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController().rearViewRevealWidth = 275
+            //revealViewController().rightViewRevealWidth = 160
+            
+            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+            
+            
+        }
+        
+    }
+    
+    
 }
+
+
+
+
+//calendar view extensions
 
 extension CalendarViewController:  JTAppleCalendarViewDataSource{
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
@@ -155,24 +179,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     }
     
     //open side menu
-    func sideMenu()
-    {
-        
-        if revealViewController() != nil{
-            
-            menuButton.target = self.revealViewController()
-            
-            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
-            revealViewController().rearViewRevealWidth = 275
-            //revealViewController().rightViewRevealWidth = 160
-            
-            view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
-            
-            
-        }
-        
-    }
+   
     
     
 }
+
+
 

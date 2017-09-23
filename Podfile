@@ -7,7 +7,10 @@ target 'Uni+' do
 
   pod "CurriculaTable"
   pod 'JTAppleCalendar', '~> 7.0'
-  pod 'FAPanels'
+  pod 'SQLite.swift', '~> 0.11.3'
+  pod 'SwiftyJSON'
+  pod 'Alamofire', '~> 4.5'
+  
 
   target 'Uni+Tests' do
     inherit! :search_paths

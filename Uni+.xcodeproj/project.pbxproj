@@ -14,9 +14,16 @@
 		521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AB1F5298E600BAE5A6 /* CustomCell.swift */; };
 		521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */; };
 		521E90B01F52DCD000BAE5A6 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AF1F52DCD000BAE5A6 /* NoteModel.swift */; };
+		524175371F762E9500FCBE34 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524175361F762E9500FCBE34 /* ConnectionManager.swift */; };
 		525CB07D1F6E04D00036F2A1 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */; };
 		525CB07F1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */; };
 		525CB0881F6EA7FC0036F2A1 /* StatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB0871F6EA7FC0036F2A1 /* StatusManager.swift */; };
+		5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */; };
+		5267D6721F76300C002A84C6 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6711F76300C002A84C6 /* CalendarViewModel.swift */; };
+		5267D6741F76301C002A84C6 /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */; };
+		5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6751F763027002A84C6 /* SettingViewModel.swift */; };
+		5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6771F76304F002A84C6 /* ProfileViewModel.swift */; };
+		5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6791F76305D002A84C6 /* NotesViewModel.swift */; };
 		5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */; };
 		5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */; };
 		5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3B1F5144CE00CED242 /* MydayModel.swift */; };
@@ -60,10 +67,17 @@
 		521E90AB1F5298E600BAE5A6 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
 		521E90AF1F52DCD000BAE5A6 /* NoteModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		524175361F762E9500FCBE34 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClendarDetailTableViewCell.swift; sourceTree = "<group>"; };
 		525CB0801F6E35540036F2A1 /* Uni+-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uni+-Bridging-Header.h"; sourceTree = "<group>"; };
 		525CB0871F6EA7FC0036F2A1 /* StatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusManager.swift; sourceTree = "<group>"; };
+		5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
+		5267D6711F76300C002A84C6 /* CalendarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewModel.swift; sourceTree = "<group>"; };
+		5267D6751F763027002A84C6 /* SettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
+		5267D6771F76304F002A84C6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		5267D6791F76305D002A84C6 /* NotesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		5291FE3B1F5144CE00CED242 /* MydayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MydayModel.swift; sourceTree = "<group>"; };
@@ -149,6 +163,12 @@
 		525CB0851F6EA7820036F2A1 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */,
+				5267D6711F76300C002A84C6 /* CalendarViewModel.swift */,
+				5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */,
+				5267D6751F763027002A84C6 /* SettingViewModel.swift */,
+				5267D6771F76304F002A84C6 /* ProfileViewModel.swift */,
+				5267D6791F76305D002A84C6 /* NotesViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -157,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				525CB0871F6EA7FC0036F2A1 /* StatusManager.swift */,
+				524175361F762E9500FCBE34 /* ConnectionManager.swift */,
 			);
 			name = Manager;
 			sourceTree = "<group>";
@@ -485,15 +506,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Uni+/Pods-Uni+-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CurriculaTable/CurriculaTable.framework",
-				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CurriculaTable.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -558,14 +583,21 @@
 				5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */,
 				521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */,
 				E7EA834E1F3558BA0030E7AA /* SecondViewController.swift in Sources */,
+				5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */,
 				521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */,
 				525CB07D1F6E04D00036F2A1 /* SideMenuTableViewController.swift in Sources */,
+				5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */,
+				5267D6741F76301C002A84C6 /* TimeTableViewModel.swift in Sources */,
+				5267D6721F76300C002A84C6 /* CalendarViewModel.swift in Sources */,
+				524175371F762E9500FCBE34 /* ConnectionManager.swift in Sources */,
 				52B0C3691F6F813000DC8672 /* SWRevealViewController.m in Sources */,
+				5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */,
 				72EB20041F41514E00A09929 /* RegisterViewController.swift in Sources */,
 				5291FE401F51609E00CED242 /* NewCell.swift in Sources */,
 				5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* NoteModel.swift in Sources */,
 				72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */,
+				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
 				E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */,
