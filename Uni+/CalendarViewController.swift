@@ -108,6 +108,7 @@ class CalendarViewController: UIViewController{
 //calendar view extensions
 
 extension CalendarViewController:  JTAppleCalendarViewDataSource{
+    
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         
@@ -123,6 +124,17 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
         
         return parameter
     }
+    
+//    func configureCell(cell: JTAppleCell? cellState: CellState)
+//    
+//    {
+//    
+//        //guard let myCell = cell as? CalendarDetail
+//    
+//    }
+//    
+    
+    
 }
 extension CalendarViewController: JTAppleCalendarViewDelegate{
     
@@ -158,22 +170,28 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState){
         guard let vaildCell = cell as? CustomCell else {
+            
+            
             return
         }
         vaildCell.selectedView.isHidden = false
         
+        
+        
     }
     
     func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
-        func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState){
+        
             guard let vaildCell = cell as? CustomCell else {
                 return
             }
             vaildCell.selectedView.isHidden = true
+       
             
-        }
+        
         
     }
+    
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo){
         
         self.setupInitialInfo(data: visibleDates)
@@ -199,9 +217,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
 }
 
+
 extension CalendarViewController : UISplitViewControllerDelegate {
     
-    
+//show the master view by default
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
         return true
     }
