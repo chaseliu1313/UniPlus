@@ -108,6 +108,18 @@
       "scale" : "2x"
     },
     {
+      "filename" : "cross.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "cross@2x.png",
+      "unassigned" : true
+    },
+    {
+      "filename" : "cross@3x.png",
+      "unassigned" : true
+    },
+    {
       "filename" : "iTunesArtwork2@3x.png",
       "unassigned" : true
     }

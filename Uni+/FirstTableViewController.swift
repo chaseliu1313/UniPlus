@@ -52,6 +52,16 @@ class FirstTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if indexPath.row == 1{
+            self.performSegue(withIdentifier: "TimetableDetail", sender: self)}
+        else if indexPath.row == 2 {
+        
+        self.performSegue(withIdentifier: "CalDetail", sender: self)
+        }
+    }
+    
     //open side menu
     func sideMenu()
     {

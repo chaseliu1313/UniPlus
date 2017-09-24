@@ -176,7 +176,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         }
         vaildCell.selectedView.isHidden = false
         
-        
+//        self.performSegue(withIdentifier: "CalDetail", sender: self)
         
     }
     

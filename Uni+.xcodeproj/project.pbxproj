@@ -10,6 +10,7 @@
 		169A9612571DAC12C01DF904 /* Pods_Uni_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F5476923D37E56DB77A63D /* Pods_Uni_Tests.framework */; };
 		229D601679ED820271988AB4 /* Pods_Uni_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E81B23F0B3189EEFEA9B9D4 /* Pods_Uni_UITests.framework */; };
 		382909FD9FFE518425C6BFBF /* Pods_Uni_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9CDD7068A9B3EBC6F8E256 /* Pods_Uni_.framework */; };
+		5214A0491F7743EC0090BD4F /* TimeTablePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */; };
 		521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */; };
 		521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AB1F5298E600BAE5A6 /* CustomCell.swift */; };
 		521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */; };
@@ -65,6 +66,7 @@
 		0F60FDBAF4F6F5F06B9F0816 /* Pods-Uni+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+/Pods-Uni+.debug.xcconfig"; sourceTree = "<group>"; };
 		11912F2C6F51CF524125503D /* Pods-Uni+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+Tests/Pods-Uni+Tests.release.xcconfig"; sourceTree = "<group>"; };
 		49F5476923D37E56DB77A63D /* Pods_Uni_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePopoverViewController.swift; sourceTree = "<group>"; };
 		521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		521E90AB1F5298E600BAE5A6 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				5267D67D1F7659F4002A84C6 /* SplitDetailViewController.swift */,
+				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
 				525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */,
 				E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */,
 				72EB20011F414E5000A09929 /* LoginViewController.swift */,
@@ -590,6 +593,7 @@
 				521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */,
 				E7EA834E1F3558BA0030E7AA /* SecondViewController.swift in Sources */,
 				5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */,
+				5214A0491F7743EC0090BD4F /* TimeTablePopoverViewController.swift in Sources */,
 				521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */,
 				525CB07D1F6E04D00036F2A1 /* SideMenuTableViewController.swift in Sources */,
 				5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */,

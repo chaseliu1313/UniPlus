@@ -21,6 +21,9 @@ class SplitDetailViewController: UIViewController {
         
     }
 
+    @IBAction func `return`(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
   
 
     

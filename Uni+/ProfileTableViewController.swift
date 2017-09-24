@@ -14,7 +14,7 @@ class ProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ProfileTable.backgroundView = UIImageView(image: UIImage(named: "Layer 1"))
+        ProfileTable.backgroundView = UIImageView(image: UIImage(named: "SideMenu-1"))
         
         ProfileTable.backgroundView?.contentMode = .scaleAspectFill
         
