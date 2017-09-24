@@ -10,6 +10,7 @@ import UIKit
 import JTAppleCalendar
 
 class CalendarViewController: UIViewController{
+    
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var calenaerView: JTAppleCalendarView!
@@ -59,6 +60,8 @@ class CalendarViewController: UIViewController{
         //setupcalendarViewUI
         setupCalendarView()
         
+        calenaerView.scrollToDate(Date.init())
+        
     }
     
     func setupCalendarView(){
@@ -90,7 +93,7 @@ class CalendarViewController: UIViewController{
             
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            //revealViewController().rightViewRevealWidth = 160
+           
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
@@ -112,12 +115,12 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         
-        formatter.dateFormat = "yyyy MM dd"
+        formatter.dateFormat = "yyyy MM dd EEEE"
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
-        let startDate = formatter.date(from:"2017 01 01")!
-        let endDate = formatter.date(from:"2017 12 31")!
+        let startDate = formatter.date(from:"2000 01 01 Sat")!
+        let endDate = formatter.date(from:"2100 01 01 Fri")!
         
         let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
         self.calenaerView.scrollingMode = ScrollingMode.stopAtEachCalendarFrameWidth
@@ -125,14 +128,7 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
         return parameter
     }
     
-//    func configureCell(cell: JTAppleCell? cellState: CellState)
-//    
-//    {
-//    
-//        //guard let myCell = cell as? CalendarDetail
-//    
-//    }
-//    
+ 
     
     
 }
@@ -175,6 +171,22 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
             return
         }
         vaildCell.selectedView.isHidden = false
+        
+        formatter.dateFormat = "yyyy"
+        let year = formatter.string(from: date)
+        formatter.dateFormat = "MMMM"
+        let month = formatter.string(from: date)
+        formatter.dateFormat = "dd"
+        let day = formatter.string(from: date)
+        formatter.dateFormat = "EEEE"
+        let weekday = formatter.string(from: date)
+        
+        
+        print(year)
+        print(month)
+        print(day)
+        print(weekday)
+        
         
 //        self.performSegue(withIdentifier: "CalDetail", sender: self)
         

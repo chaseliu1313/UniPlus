@@ -11,6 +11,7 @@
 		229D601679ED820271988AB4 /* Pods_Uni_UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E81B23F0B3189EEFEA9B9D4 /* Pods_Uni_UITests.framework */; };
 		382909FD9FFE518425C6BFBF /* Pods_Uni_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF9CDD7068A9B3EBC6F8E256 /* Pods_Uni_.framework */; };
 		5214A0491F7743EC0090BD4F /* TimeTablePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */; };
+		5214A04B1F77836E0090BD4F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A04A1F77836E0090BD4F /* Event.swift */; };
 		521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */; };
 		521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AB1F5298E600BAE5A6 /* CustomCell.swift */; };
 		521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */; };
@@ -67,6 +68,7 @@
 		11912F2C6F51CF524125503D /* Pods-Uni+Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+Tests/Pods-Uni+Tests.release.xcconfig"; sourceTree = "<group>"; };
 		49F5476923D37E56DB77A63D /* Pods_Uni_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePopoverViewController.swift; sourceTree = "<group>"; };
+		5214A04A1F77836E0090BD4F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		521E90AB1F5298E600BAE5A6 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */,
 				521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */,
 				5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */,
+				5291FE3F1F51609E00CED242 /* NewCell.swift */,
 				521E90AB1F5298E600BAE5A6 /* CustomCell.swift */,
 				5267D67B1F764E90002A84C6 /* SplitViewController.swift */,
 				525CB0841F6E356F0036F2A1 /* SWViewController */,
@@ -215,8 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				521E90AF1F52DCD000BAE5A6 /* NoteModel.swift */,
-				5291FE3F1F51609E00CED242 /* NewCell.swift */,
 				5291FE3B1F5144CE00CED242 /* MydayModel.swift */,
+				5214A04A1F77836E0090BD4F /* Event.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -608,6 +611,7 @@
 				5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* NoteModel.swift in Sources */,
 				72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */,
+				5214A04B1F77836E0090BD4F /* Event.swift in Sources */,
 				5267D67E1F7659F4002A84C6 /* SplitDetailViewController.swift in Sources */,
 				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
