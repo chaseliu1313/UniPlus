@@ -13,9 +13,41 @@ import SwiftyJSON
 class ConnectionManager {
 
 
-    static let baseURL = "https://api.darksky.net/forecase/"
+   static let baseUrl = "https://api.darksky.net/forecast/0de20a0ec3ffe340a99836631b96d01a/"
 
 
+    
+    
+    static func getJSON(completion: @escaping (Bool,JSON) -> Void){
+        
+        let url = baseUrl
+        
+        Alamofire.request(url).responseJSON { (response) in
+            
+            
+            let json = JSON(response.data!)
+            
+            switch response.result{
+                
+            case .success(_):
+                
+                
+                
+                
+                completion(true, json)
+                
+                
+                
+            case .failure(_):
+                print("connection faild")
+                completion(false, JSON.null)
+                
+            }
+            
+        }
+        
+        
+    }
 
 
 

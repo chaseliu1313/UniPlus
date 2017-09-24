@@ -8,10 +8,14 @@
 
 import UIKit
 
-class NewCell: UITableViewCell {
+class WeatherCell: UITableViewCell {
 
     
     @IBOutlet weak var imageV: UIImageView!
+    @IBOutlet weak var campus: UILabel!
+    @IBOutlet weak var datentime: UILabel!
+    @IBOutlet weak var Temp: UILabel!
+    @IBOutlet weak var weatherIcon: UIImageView!
     
     
    

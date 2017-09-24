@@ -10,51 +10,55 @@ import Foundation
 import UIKit
 
 
-//class Weather
-//{
-//    var image: UIImage
-//    var temper: String
-//    var location: String
-//    var date: String
-//    
-//    init(temper: String, location: String, date: String, imageName: String){
-//        self.temper = "17 C"
-//        self.location = "City Campus"
-//        self.date = "2017 Sep 13"
-//        self.image = UIImage(named:"Sun")!
-//        
-//        
-//    }
-//
-//}
 
-class MydayModel {
+struct MydayModel {
 
-
+    static let campuses = ["City Campus":"-37.8089435,144.8250415","Bundoora Campus": "-37.8089435,144.8250415", "Brunswick Campus": "-37.7903556,144.944014"]
     
-    let pics = [#imageLiteral(resourceName: "Weather"), #imageLiteral(resourceName: "Lecture"),#imageLiteral(resourceName: "Event"),#imageLiteral(resourceName: "Assignment")]
+    var campus: String = "City Campus"
+    var coordinates: String = ""
+    var CurrentTime: String?
+    var fara: Double?
+    var cel: Double?
     
-    init() {
-        
-        
-        
-        
-    }
     
-    func getModel()->[UIImage]{
+    mutating func setCampus(campus: String){
     
-    return pics
-    }
+    self.campus = campus
     
-    func Get(index: Int) -> UIImage{
-        
-        let im: UIImage  = pics[index]
-        
-    return im
     
     }
     
-
-
+    mutating func getCoordinates(){
+    
+        if self.campus != "" {
+        
+            for cam in MydayModel.campuses.keys{
+                
+                
+                if cam == self.campus {
+                
+                self.coordinates = MydayModel.campuses[cam]!
+                
+                }
+            
+            
+            }
+        
+        }
+    
+    
+    }
+    
+    mutating func getCelsius() -> Double{
+    
+    self.cel = (self.fara! - 32)/1.8
+    
+        return self.cel!
+    }
+    
+    
+ 
+ 
 
 }
