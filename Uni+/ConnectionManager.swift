@@ -18,9 +18,9 @@ class ConnectionManager {
 
     
     
-    static func getJSON(completion: @escaping (Bool,JSON) -> Void){
+    static func getJSON(url: String, completion: @escaping (Bool,JSON) -> Void){
         
-        let url = baseUrl
+        let url = baseUrl + url
         
         Alamofire.request(url).responseJSON { (response) in
             

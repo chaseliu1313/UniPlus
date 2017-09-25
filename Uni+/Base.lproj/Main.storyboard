@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -686,7 +687,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campus" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucG-ed-PxL">
-                                            <rect key="frame" x="121.66666666666669" y="0.0" width="171" height="33"/>
+                                            <rect key="frame" x="243" y="0.0" width="171" height="33"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="33" id="RPR-82-4qm"/>
                                                 <constraint firstAttribute="width" constant="171" id="fB1-Q7-T8P"/>
@@ -719,15 +720,25 @@
                                                 </label>
                                             </subviews>
                                         </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bza-F4-ogV">
+                                            <rect key="frame" x="28" y="4" width="130" height="25"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="DeP-gn-DoW" firstAttribute="top" secondItem="ucG-ed-PxL" secondAttribute="bottom" constant="8" symbolic="YES" id="78u-4D-zIU"/>
+                                        <constraint firstItem="bza-F4-ogV" firstAttribute="firstBaseline" secondItem="ucG-ed-PxL" secondAttribute="firstBaseline" constant="4" id="Fbc-UA-cTx"/>
                                         <constraint firstItem="ucG-ed-PxL" firstAttribute="top" secondItem="uht-V5-4VB" secondAttribute="top" id="Jvb-bL-wCx"/>
                                         <constraint firstItem="kJf-2F-wD8" firstAttribute="centerX" secondItem="uht-V5-4VB" secondAttribute="centerX" id="K6v-NG-mNU"/>
                                         <constraint firstItem="DeP-gn-DoW" firstAttribute="leading" secondItem="uht-V5-4VB" secondAttribute="leadingMargin" constant="20" id="Ofd-W9-8GE"/>
+                                        <constraint firstItem="bza-F4-ogV" firstAttribute="leading" secondItem="DeP-gn-DoW" secondAttribute="leading" id="Wge-EJ-iZi"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="DeP-gn-DoW" secondAttribute="trailing" constant="20" id="apQ-MA-cij"/>
+                                        <constraint firstItem="DeP-gn-DoW" firstAttribute="top" secondItem="bza-F4-ogV" secondAttribute="bottom" constant="12" id="jK2-za-CiU"/>
+                                        <constraint firstItem="ucG-ed-PxL" firstAttribute="leading" secondItem="bza-F4-ogV" secondAttribute="trailing" constant="85" id="mBo-Ig-Pq1"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="kJf-2F-wD8" secondAttribute="bottom" constant="-0.33333333333334281" id="ofa-zp-vs1"/>
-                                        <constraint firstItem="kJf-2F-wD8" firstAttribute="centerX" secondItem="ucG-ed-PxL" secondAttribute="centerX" id="red-EV-l8g"/>
+                                        <constraint firstItem="kJf-2F-wD8" firstAttribute="centerX" secondItem="ucG-ed-PxL" secondAttribute="centerX" constant="-121.5" id="red-EV-l8g"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -735,10 +746,11 @@
                                     <outlet property="campus" destination="ucG-ed-PxL" id="Rwe-ED-wLU"/>
                                     <outlet property="datentime" destination="kJf-2F-wD8" id="LDT-kM-4MX"/>
                                     <outlet property="imageV" destination="M28-pE-PVS" id="OL1-nU-uY1"/>
+                                    <outlet property="weatherDescip" destination="bza-F4-ogV" id="IiO-4V-FWF"/>
                                     <outlet property="weatherIcon" destination="M28-pE-PVS" id="JOc-gx-djB"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qs0-g3-paP" customClass="EventTableViewCell" customModule="Uni_" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventCell" id="qs0-g3-paP" customClass="EventTableViewCell" customModule="Uni_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="221" width="414" height="193"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qs0-g3-paP" id="77z-tf-aut" customClass="EventTableViewCell" customModule="Uni_" customModuleProvider="target">

@@ -14,7 +14,8 @@ class FirstTableViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
-    let myday = MydayModel()
+    let weatherVM = WeatherModelViewItem.init()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,13 +41,24 @@ class FirstTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "firstcell",for: indexPath) as! WeatherCell
+        
+        
+        let cell: UITableViewCell!
+        
+       if indexPath.row == 0
+        
+       { cell = tableView.dequeueReusableCell(withIdentifier: "firstcell",for: indexPath) as! WeatherCell}
         
         
         
         
-        let pic = myday.Get(index: indexPath.row)
-       cell.im = pic
+       else {
+        
+        cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
+        
+        }
+        
+       
         cell.backgroundColor = UIColor.clear
         
         
