@@ -51,11 +51,11 @@ class WeatherModelViewItem{
             
             if self.isCel {
             
-            self.temp = String(Int(self.myDay.getCelsius(fara: temper)))
+            self.temp = String(Int(self.myDay.getCelsius(fara: temper))) + "  °C"
             }
             else {
             
-                self.temp = String(temper)
+                self.temp = String(temper) + "  °F"
             
             }
             

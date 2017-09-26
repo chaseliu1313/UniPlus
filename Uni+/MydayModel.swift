@@ -108,12 +108,12 @@ struct Weather {
         let hour = Int(formatter.string(from: date))
         var icon : UIImage?
         
-        if hour! <= 19 {
+        if hour! <= 19 && hour! >= 5 {
         
             for key in dayWeather.keys
             
             {
-                if weather == key || key.contains(weather){
+                 if key == weather || weather.contains(key){
                 
                 icon = dayWeather[key]
                     
@@ -134,7 +134,7 @@ struct Weather {
             for key in nightWeather.keys
                 
             {
-                if weather == key || key.contains(weather){
+                if key == weather || weather.contains(key){
                     
                     icon = nightWeather[key]
                     
