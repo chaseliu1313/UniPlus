@@ -14,6 +14,7 @@ class WeatherModelViewItem{
     var myDay = MydayModel()
     let weatherModel = Weather()
     
+    var isCel = true
     
     init() {
         self.updateWeather()
@@ -28,6 +29,7 @@ class WeatherModelViewItem{
     
     
 
+    //load static value from model and retrieve instant value from weather api
     
     func updateWeather(){
        let u = myDay.getCoordinates()
@@ -43,7 +45,19 @@ class WeatherModelViewItem{
             
            self.weatherDes = weather["summary"] as! String
             self.icon = self.weatherModel.getIcon(weather: self.weatherDes)
-            self.temp = weather["apparentTemperature"] as! String
+            let temper = weather["apparentTemperature"] as! Double
+            
+            self.isCel = self.myDay.isCel
+            
+            if self.isCel {
+            
+            self.temp = String(Int(self.myDay.getCelsius(fara: temper)))
+            }
+            else {
+            
+                self.temp = String(temper)
+            
+            }
             
             
         }
@@ -58,7 +72,13 @@ class WeatherModelViewItem{
         
         }
     
+    //update Faraheight or Celsius value to model
+    func updateModel(isCel: Bool){
+        
+        self.isCel = isCel
+        self.myDay.isCel = isCel
     
+    }
     
     
     }

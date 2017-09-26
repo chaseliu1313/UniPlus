@@ -10,6 +10,7 @@ import UIKit
 
 class FirstTableViewController: UITableViewController {
     
+    @IBOutlet var myDayTable: UITableView!
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -43,26 +44,33 @@ class FirstTableViewController: UITableViewController {
        
         
         
-        let cell: UITableViewCell!
+      
         
        if indexPath.row == 0
         
-       { cell = tableView.dequeueReusableCell(withIdentifier: "firstcell",for: indexPath) as! WeatherCell}
+       { let cell = tableView.dequeueReusableCell(withIdentifier: "firstcell",for: indexPath) as! WeatherCell
+        //myDayTable.reloadData()
+        
+        cell.setData(weather: self.weatherVM)
         
         
-        
-        
+        cell.backgroundColor = UIColor.clear
+         return cell
+        }
+       
+       
        else {
         
-        cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
+        cell.backgroundColor = UIColor.clear
+        return cell
         }
         
        
-        cell.backgroundColor = UIColor.clear
         
         
-        return cell
+        
+        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

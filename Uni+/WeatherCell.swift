@@ -10,8 +10,7 @@ import UIKit
 
 class WeatherCell: UITableViewCell {
 
-    
-    @IBOutlet weak var imageV: UIImageView!
+ 
     @IBOutlet weak var campus: UILabel!
     @IBOutlet weak var datentime: UILabel!
     @IBOutlet weak var Temp: UILabel!
@@ -19,20 +18,24 @@ class WeatherCell: UITableViewCell {
     @IBOutlet weak var weatherDescip: UILabel!
     
     
-   
-    var im : UIImage?{
     
-        didSet{
+    
+    func setData(weather: WeatherModelViewItem?){
+    
+        guard let weatherData = weather
+            
+            else {return}
         
-        self.updateUI()
-        }
-        
-    }
-    func updateUI(){
-    
-       imageV?.image = im
+       self.campus.text = weatherData.campus
+      self.datentime.text = weatherData.date
+        self.Temp.text = weatherData.temp
+        self.weatherIcon.image = weatherData.icon
+        self.weatherDescip.text = weatherData.weatherDes
     
     }
+    
+    
+    
     
     
 

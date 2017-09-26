@@ -18,8 +18,9 @@ struct MydayModel {
     var campus: String = "City Campus"
     var coordinates: String = "-37.8089435,144.8250415"
     var CurrentTime: String?
-    var fara: Double?
-    var cel: Double? 
+    
+    var isCel = true
+    var temper: Double?
     
     
     init(){
@@ -58,11 +59,11 @@ struct MydayModel {
     }
     
     //turn Faraheight temperature into Celsius
-    mutating func getCelsius() -> Double{
+    mutating func getCelsius(fara: Double) -> Double{
     
-    self.cel = (self.fara! - 32)/1.8
+    self.temper = (fara - 32)/1.8
     
-        return self.cel!
+        return self.temper!
     }
     
     mutating func getCurrentTime()->String{
