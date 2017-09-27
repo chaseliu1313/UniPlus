@@ -12,6 +12,14 @@ class SettingsTableViewController: UITableViewController {
 
     @IBOutlet var SettingTable: UITableView!
     
+    
+    let settingTitle = ["Week Start On:", "show Temperature As:", "Choose Campus"]
+    
+     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+        return (settingTitle.count)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
