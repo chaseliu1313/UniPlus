@@ -52,6 +52,7 @@ class FirstTableViewController: UITableViewController {
         //myDayTable.reloadData()
         
         cell.setData(weather: self.weatherVM)
+        
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         cell.backgroundColor = UIColor.clear
