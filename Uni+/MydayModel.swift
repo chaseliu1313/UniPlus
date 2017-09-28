@@ -12,6 +12,7 @@ import UIKit
 
 
 struct MydayModel {
+    
     //campus name module
     static let campuses = ["City Campus":"-37.8089435,144.8250415","Bundoora Campus": "-37.8089435,144.8250415", "Brunswick Campus": "-37.7903556,144.944014"]
     
