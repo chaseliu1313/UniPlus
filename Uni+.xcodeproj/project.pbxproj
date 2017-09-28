@@ -45,6 +45,8 @@
 		E7EA83561F3558BA0030E7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EA83541F3558BA0030E7AA /* LaunchScreen.storyboard */; };
 		E7EA83611F3558BA0030E7AA /* Uni_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA83601F3558BA0030E7AA /* Uni_Tests.swift */; };
 		E7EA836C1F3558BA0030E7AA /* Uni_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA836B1F3558BA0030E7AA /* Uni_UITests.swift */; };
+		E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */; };
+		E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701061F7B7F1600B805A2 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		E7EA83671F3558BA0030E7AA /* Uni+UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uni+UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EA836B1F3558BA0030E7AA /* Uni_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uni_UITests.swift; sourceTree = "<group>"; };
 		E7EA836D1F3558BA0030E7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		E85701061F7B7F1600B805A2 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +206,8 @@
 				72EB20011F414E5000A09929 /* LoginViewController.swift */,
 				72EB20031F41514E00A09929 /* RegisterViewController.swift */,
 				5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */,
+				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
+				E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */,
 				5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */,
 				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
 				521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */,
@@ -614,12 +620,14 @@
 				5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* NoteModel.swift in Sources */,
 				5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */,
+				E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */,
 				72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */,
 				5214A04B1F77836E0090BD4F /* Event.swift in Sources */,
 				5267D67E1F7659F4002A84C6 /* SplitDetailViewController.swift in Sources */,
 				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
+				E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */,
 				E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */,
 				525CB07F1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift in Sources */,
 				525CB0881F6EA7FC0036F2A1 /* StatusManager.swift in Sources */,
