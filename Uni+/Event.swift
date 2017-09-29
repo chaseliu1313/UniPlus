@@ -23,16 +23,17 @@ enum objType{
 protocol Event {
     
     
-    var date: Date {get set}
+    var date: String {get set}
     var description : String {get set}
     var type: objType{get}
+    var id: Int{get}
     
     func setDescription(input: String)
-    func setDate(date:Date)
+    func setDate(date:String)
     func getType() -> objType
-    func getDate() -> Date
+    func getDate() -> String
     func getDescription()-> String
-    func parseDate() -> String
+    func parseDate(date:Date) -> String
     
     
 }
@@ -41,9 +42,9 @@ protocol Event {
 protocol DateEventDecorator: Event {
     
     
-    func setEndDate(endDate: Date)
+    func setEndDate(endDate: String)
     func setPeople(people: String)
-    func getEndDate()->Date
+    func getEndDate()->String
     func getPeople()-> String
     
 }
@@ -51,12 +52,14 @@ protocol DateEventDecorator: Event {
 //notes object
 class Note: Event{
     
-    var date:Date
+    var id: Int
+    var date: String
     var description: String
     var type: objType = objType.Notes
     
-    init(date:Date, description: String) {
+    init(id: Int, date:String, description: String) {
         
+        self.id = id
         self.date = date
         self.description = description
     }
@@ -65,7 +68,7 @@ class Note: Event{
         self.description = input
     }
     
-    func setDate(date: Date) {
+    func setDate(date: String) {
         self.date = date
         
     }
@@ -74,24 +77,24 @@ class Note: Event{
         return type
     }
     
-    func getDate() -> Date {
+    func getDate() -> String {
         return date
     }
     func getDescription() -> String {
         return description
     }
-    func parseDate() -> String {
+    func parseDate(date:Date) -> String {
         
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy"
-        let year = formatter.string(from: self.date)
+        let year = formatter.string(from: date)
         formatter.dateFormat = "MMMM"
-        let month = formatter.string(from: self.date)
+        let month = formatter.string(from: date)
         formatter.dateFormat = "dd"
-        let day = formatter.string(from: self.date)
+        let day = formatter.string(from: date)
         formatter.dateFormat = "EEEE"
-        let weekday = formatter.string(from: self.date)
+        let weekday = formatter.string(from: date)
         
         return year+month+day+weekday
     }
@@ -103,15 +106,17 @@ class Note: Event{
 //clendar event object
 class CalendarEvent:DateEventDecorator{
     
-    var date:Date
+    var id: Int
+    var date: String
     var description: String
     var type: objType = objType.CalendarEvent
-    var endDate:Date
+    var endDate:String
     var people: String = ""
     
     
-    init(date:Date,endDate:Date, description: String) {
+    init(id: Int, date:String,endDate:String, description: String) {
         
+        self.id = id
         self.date = date
         self.endDate = endDate
         self.description = description
@@ -121,7 +126,7 @@ class CalendarEvent:DateEventDecorator{
         self.description = input
     }
     
-    func setDate(date: Date) {
+    func setDate(date: String) {
         self.date = date
         
     }
@@ -130,7 +135,7 @@ class CalendarEvent:DateEventDecorator{
         return type
     }
     
-    func getDate() -> Date {
+    func getDate() -> String {
         return date
     }
     func getDescription() -> String {
@@ -147,30 +152,30 @@ class CalendarEvent:DateEventDecorator{
     }
     
     
-    func setEndDate(endDate: Date) {
+    func setEndDate(endDate: String) {
         
         self.endDate = endDate
     }
     
-    func getEndDate()-> Date{
+    func getEndDate()-> String{
         
         
         return self.endDate
     }
     
-    func parseDate() -> String {
+    func parseDate(date:Date) -> String {
         
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy"
-        let year = formatter.string(from: self.date)
+        let year = formatter.string(from: date)
         formatter.dateFormat = "MMMM"
-        let month = formatter.string(from: self.date)
+        let month = formatter.string(from: date)
         formatter.dateFormat = "dd"
-        let day = formatter.string(from: self.date)
+        let day = formatter.string(from: date)
         formatter.dateFormat = "EEEE"
-        let weekday = formatter.string(from: self.date)
-        
+        let weekday = formatter.string(from: date)
+    
         return year+month+day+weekday
         
     }
@@ -179,16 +184,17 @@ class CalendarEvent:DateEventDecorator{
 //timetable item object
 class TimetableEvent:DateEventDecorator{
     
-    
-    var date:Date
+    var id: Int
+    var date:String
     var description: String
     var type: objType = objType.TimeTable
-    var endDate:Date
+    var endDate:String
     var people: String = ""
     
     
-    init(date:Date,endDate:Date, description: String) {
+    init(id: Int, date:String,endDate:String, description: String) {
         
+        self.id = id
         self.date = date
         self.endDate = endDate
         self.description = description
@@ -198,7 +204,7 @@ class TimetableEvent:DateEventDecorator{
         self.description = input
     }
     
-    func setDate(date: Date) {
+    func setDate(date: String) {
         self.date = date
         
     }
@@ -207,7 +213,7 @@ class TimetableEvent:DateEventDecorator{
         return type
     }
     
-    func getDate() -> Date {
+    func getDate() -> String {
         return date
     }
     func getDescription() -> String {
@@ -224,29 +230,29 @@ class TimetableEvent:DateEventDecorator{
     }
     
     
-    func setEndDate(endDate: Date) {
+    func setEndDate(endDate: String) {
         
         self.endDate = endDate
     }
     
-    func getEndDate()-> Date{
+    func getEndDate()-> String{
         
         
         return self.endDate
     }
     
-    func parseDate() -> String {
+    func parseDate(date:Date) -> String {
         
         let formatter = DateFormatter()
         
         formatter.dateFormat = "yyyy"
-        let year = formatter.string(from: self.date)
+        let year = formatter.string(from: date)
         formatter.dateFormat = "MMMM"
-        let month = formatter.string(from: self.date)
+        let month = formatter.string(from: date)
         formatter.dateFormat = "dd"
-        let day = formatter.string(from: self.date)
+        let day = formatter.string(from: date)
         formatter.dateFormat = "EEEE"
-        let weekday = formatter.string(from: self.date)
+        let weekday = formatter.string(from: date)
         
         return year+month+day+weekday
         

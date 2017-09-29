@@ -10,10 +10,7 @@ import Foundation
 
 struct StatusManager {
 
-
-    static var isLoggedIn: Bool = false
-    
-    
+ 
 
     static func setLogin () -> Bool{
         
@@ -22,7 +19,7 @@ struct StatusManager {
         UserDefaults.standard.set(true, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         
-        self.isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
+        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
         return isLoggedIn
     
     
@@ -36,10 +33,34 @@ struct StatusManager {
         UserDefaults.standard.set(false, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         
-        self.isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
         
         
         
+    }
+    
+    static func setNewUser(){
+    
+        UserDefaults.standard.set(true, forKey: "isNewUser")
+        UserDefaults.standard.synchronize()
+       
+        
+        
+    
+    }
+    
+    static func notNew(){
+    
+        UserDefaults.standard.set(false, forKey: "isNewUser")
+        UserDefaults.standard.synchronize()
+        
+    }
+    
+    static func isNewUser() -> Bool{
+        
+       let isNewUser = UserDefaults.standard.bool(forKey: "isNewUser")
+       
+        
+        return isNewUser
     }
     
     

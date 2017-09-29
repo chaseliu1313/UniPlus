@@ -40,13 +40,13 @@ class CalendarViewController: UIViewController{
         
     
        //setting navigation bar button and function
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         let addB = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addDate))
         
         self.navigationItem.rightBarButtonItem = addB
         
-    navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
@@ -112,6 +112,7 @@ class CalendarViewController: UIViewController{
 
 extension CalendarViewController:  JTAppleCalendarViewDataSource{
     
+    //initialize calendar
     func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
         
         
@@ -132,6 +133,7 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
     
     
 }
+
 extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     func handleCellTextColor(view: JTAppleCell?, cellState: CellState){
@@ -188,7 +190,8 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         print(weekday)
         
         
-//        self.performSegue(withIdentifier: "CalDetail", sender: self)
+
+        
         
     }
     
