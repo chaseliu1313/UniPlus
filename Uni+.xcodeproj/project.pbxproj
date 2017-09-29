@@ -30,6 +30,7 @@
 		5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6791F76305D002A84C6 /* NotesViewModel.swift */; };
 		5267D67C1F764E90002A84C6 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D67B1F764E90002A84C6 /* SplitViewController.swift */; };
 		5267D67E1F7659F4002A84C6 /* SplitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D67D1F7659F4002A84C6 /* SplitDetailViewController.swift */; };
+		5284B12A1F7E8E4B008E6E0D /* RegisterPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */; };
 		5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */; };
 		5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */; };
 		5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3B1F5144CE00CED242 /* MydayModel.swift */; };
@@ -92,6 +93,7 @@
 		5267D6791F76305D002A84C6 /* NotesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		5267D67B1F764E90002A84C6 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
 		5267D67D1F7659F4002A84C6 /* SplitDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitDetailViewController.swift; sourceTree = "<group>"; };
+		5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPopupViewController.swift; sourceTree = "<group>"; };
 		5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		5291FE3B1F5144CE00CED242 /* MydayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MydayModel.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		5291FE431F5178F900CED242 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */,
 				5267D67D1F7659F4002A84C6 /* SplitDetailViewController.swift */,
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
 				525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */,
@@ -612,6 +615,7 @@
 				521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */,
 				525CB07D1F6E04D00036F2A1 /* SideMenuTableViewController.swift in Sources */,
 				5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */,
+				5284B12A1F7E8E4B008E6E0D /* RegisterPopupViewController.swift in Sources */,
 				5267D6741F76301C002A84C6 /* TimeTableViewModel.swift in Sources */,
 				5267D6721F76300C002A84C6 /* CalendarViewModel.swift in Sources */,
 				5267D67C1F764E90002A84C6 /* SplitViewController.swift in Sources */,
