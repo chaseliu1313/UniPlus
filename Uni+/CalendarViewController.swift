@@ -17,7 +17,7 @@ class CalendarViewController: UIViewController{
     
     @IBOutlet weak var detailTable: UITableView!
     
-   // navigationController?.navigationBar.shadowImage = UIImage()
+  
     
    
     @IBOutlet weak var menuButton: UIBarButtonItem!

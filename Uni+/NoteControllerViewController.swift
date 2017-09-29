@@ -10,24 +10,32 @@ import UIKit
 
 class NoteControllerViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+  
     
     @IBOutlet weak var NoteTable: UITableView!
-    var note: NoteModel = NoteModel()
+    //var note: NoteModel = NoteModel()
     
     var selectedRow: Int = -1
     var newRowText: String = ""
+    var data:[String] = ["row1" ,"row2"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         NoteTable.backgroundView = UIImageView(image: UIImage(named: "Rectangle 3"))
         NoteTable.backgroundView?.contentMode = .scaleAspectFill
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
         let addB = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addNotes))
         
         self.navigationItem.rightBarButtonItem = addB
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
-        self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         load()
         
@@ -36,17 +44,17 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     override func viewWillAppear(_ animated: Bool) {
-         super.viewWillAppear(animated)
+        
+        super.viewWillAppear(animated)
         if selectedRow == -1 {
         return
         }
-        //data[selectedRow] = newRowText
+        data[selectedRow] = newRowText
         
-        newRowText = note.notes[selectedRow]
+        newRowText = data[selectedRow]
         
         if newRowText == "" {
-            //data.remove(at:selectedRow)
-            note.notes.remove(at: selectedRow)
+            data.remove(at:selectedRow)
             
         }
         NoteTable.reloadData()
@@ -61,8 +69,8 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
             return
         }
         let name: String = "New Note"
-        //data.insert(name, at: 0)
-        note.notes.insert(name, at: 0)
+        data.insert(name, at: 0)
+        
         let indexPath:IndexPath = IndexPath(row: 0, section:0)
         NoteTable.insertRows(at: [indexPath], with: .automatic)
         NoteTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
@@ -70,19 +78,22 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
         
     }
     
-    override func setEditing(_ editing: Bool, animated: Bool) {
-        
-        
-        
-        super.setEditing(editing, animated: animated)
-        NoteTable.setEditing(editing, animated: animated)
-    }
+    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         
-        //data.remove(at: indexPath.row)
-        note.notes.remove(at: indexPath.row)
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+        
+        data.remove(at: indexPath.row)
+        NoteTable.reloadData()
         NoteTable.deleteRows(at: [indexPath], with: .fade)
+        }
+        
+        
+        
+        
+        
         save()
         
     }
@@ -95,14 +106,14 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
     //return the number of sections
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return note.notes.count
+        return data.count
     }
     
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
        
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "NoteCell")!
         
-        cell.textLabel?.text = note.notes[indexPath.row]            //data[indexPath.row]
+        cell.textLabel?.text = data[indexPath.row]
         cell.backgroundColor = UIColor.clear
 
         return cell
@@ -119,18 +130,18 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
         let detailView: DetialViewController = segue.destination as! DetialViewController
         selectedRow = NoteTable.indexPathForSelectedRow!.row
         detailView.masterView = self
-        detailView.setText(input: note.notes[selectedRow]) //data[selectedRow]
+        detailView.setText(input: data[selectedRow]) //data[selectedRow]
     }
     
     // data saving and loading method for assignment 1
     func save(){
-       UserDefaults.standard.set(note.notes, forKey: "userNotes")
+       //UserDefaults.standard.set(note.notes, forKey: "userNotes")
         UserDefaults.standard.synchronize()
     }
     
     func load(){
         if let loadedData = UserDefaults.standard.value(forKey: "userNotes")as? [String]{
-          note.notes = loadedData
+          data = loadedData
             NoteTable.reloadData()
         
         }
@@ -142,9 +153,11 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
         
         if revealViewController() != nil{
             
+            menuButton.target = self.revealViewController()
             
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            //revealViewController().rightViewRevealWidth = 160
+            
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             

@@ -57,8 +57,15 @@ class Note: Event{
     var description: String
     var type: objType = objType.Notes
     
-    init(id: Int, date:String, description: String) {
+    init( date:String, description: String) {
         
+        self.id = 0
+        self.date = date
+        self.description = description
+    }
+    
+    init(id: Int, date:String, description: String){
+    
         self.id = id
         self.date = date
         self.description = description
@@ -258,3 +265,6 @@ class TimetableEvent:DateEventDecorator{
         
         
     }}
+
+
+

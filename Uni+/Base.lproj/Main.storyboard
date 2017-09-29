@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F2073" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wkP-SP-Ww8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wkP-SP-Ww8">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -54,9 +54,14 @@
                             <constraint firstAttribute="bottom" secondItem="Fcd-kT-STS" secondAttribute="bottom" id="xrk-e5-m8g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notes" id="wps-J3-ue2"/>
+                    <navigationItem key="navigationItem" title="Notes" id="wps-J3-ue2">
+                        <barButtonItem key="leftBarButtonItem" image="SideMenu" id="biZ-kp-CrV">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="NoteTable" destination="Fcd-kT-STS" id="fBl-Y5-ptX"/>
+                        <outlet property="menuButton" destination="biZ-kp-CrV" id="Tpy-9e-5VN"/>
                         <segue destination="K3t-Br-XHD" kind="show" identifier="Detail" id="0AN-m6-jf1"/>
                     </connections>
                 </viewController>
@@ -1458,8 +1463,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setting" id="ejX-jZ-4dL">
-                        <barButtonItem key="leftBarButtonItem" image="back-arrow" id="009-oS-JcM">
-                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <barButtonItem key="leftBarButtonItem" image="Return" id="009-oS-JcM">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="return:" destination="Tlu-i1-rSK" id="YTZ-et-u6b"/>
                             </connections>
@@ -1502,7 +1507,6 @@
         <image name="Rectangle 3" width="414" height="736"/>
         <image name="Return" width="18" height="18"/>
         <image name="SideMenu" width="17" height="15"/>
-        <image name="back-arrow" width="21" height="21"/>
         <image name="calendar" width="24" height="24"/>
         <image name="cross" width="52" height="52"/>
         <image name="map" width="24" height="24"/>

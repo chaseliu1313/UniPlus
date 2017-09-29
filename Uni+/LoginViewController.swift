@@ -6,13 +6,17 @@
 //  Copyright © 2017 Chase Liu. All rights reserved.
 //
 
+//universal instance of database manager
+
+
+
 import UIKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textField2: UITextField!
-    
+    let db = DbManager()
 
     
     @IBAction func login(_ sender: Any) {
@@ -33,12 +37,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
+        
+        
+        db.createDB()
+        db.createTable()
         super.viewDidLoad()
         textField.delegate = self
         textField2.delegate = self
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
+        
         
     }
     

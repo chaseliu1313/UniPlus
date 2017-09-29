@@ -12,10 +12,14 @@ import SQLite
 
 class DbManager{
     
+    
+    
+    //let user: User?
     var database : Connection!
     
     //userTable - parent table
     let usersTable = Table("user")
+    
     let id = Expression<Int>("id")
     let name = Expression<String>("name")
     let email = Expression<String>("email")
@@ -23,6 +27,7 @@ class DbManager{
     
     //clendarEventTable
     let calendarTable = Table("calendar")
+    
     let calID = Expression<Int>("calID")
     let user_id = Expression<Int>("userID")
     let date = Expression<String>("date")
@@ -32,6 +37,7 @@ class DbManager{
     
     //timetable Event Table
     let timeTTable = Table("timetable")
+    
     let TTID = Expression<Int>("TTID")
     let user_id2 = Expression<Int>("userID")
     let TTdate = Expression<String>("date")
@@ -41,6 +47,7 @@ class DbManager{
     
     //notesTable
     let noteTable = Table("calendar")
+    
     let noteID = Expression<Int>("calID")
     let Nuser_id = Expression<Int>("userID")
     let Ndate = Expression<String>("date")
@@ -115,7 +122,7 @@ class DbManager{
         
         }
         
-        let createTable4 = self.timeTTable.create{(table) in
+        let createTable4 = self.noteTable.create{(table) in
             table.column(self.noteID, primaryKey: .autoincrement)
             table.column(self.Nuser_id)
             table.column(self.Ndate)
@@ -145,7 +152,7 @@ class DbManager{
    
     //usertable functions
     
-    func inserInfoUser(name: String, email: String, password: String){
+    func inserInfoUser(name: String, email: String, password: String) -> Bool{
         
         let insert = self.usersTable.insert(self.name <- name, self.email <- email, self.password <- password)
         
@@ -153,18 +160,21 @@ class DbManager{
         do{
             try self.database.run(insert)
             print("inserted \(name) and \(email)")
+            return true
             
         }
         catch{
-            
             print(error)
+            return false
+            
         }
         
         
     }
     
     
-    func matchUser(email: String, password: String){
+    func matchUser(email: String, password: String) -> Int? {
+        var userID : Int?
         
         let find = self.usersTable.select(id).filter(self.email == email).filter(self.password == password)
         
@@ -172,7 +182,7 @@ class DbManager{
             
             for user in try self.database.prepare(find){
                 
-                print(user[id])
+                userID = user[id]
                 
                 
             }
@@ -182,6 +192,8 @@ class DbManager{
         catch{
             
         }
+        
+        return userID
         
     }
     
@@ -273,6 +285,97 @@ class DbManager{
         }
         print("userTable has droped")
         
+    }
+    
+    
+    
+    
+    //note table functions
+    
+    func addNote(note: Note, id: Int){
+    
+    let userID = id
+    let date = note.date
+    let description = note.description
+        
+    let insert = self.noteTable.insert(self.Nuser_id <- userID, self.Ndate <- date, self.Ndescription <- description)
+    
+        do{
+            try self.database.run(insert)
+            print("inserted Note for \(userID)")
+            
+        }
+        catch{
+        
+            print(error)
+        }
+    
+    }
+    
+    func loadNote() -> [Note]{
+    
+        var notes: [Note] = []
+        
+        do{
+        
+            for note in try self.database.prepare(noteTable){
+            
+                let newNote = Note.init(id: note[noteID], date: note[Ndate], description: note[Ndescription])
+                notes.append(newNote)
+            
+            }
+        }
+        
+        catch{
+            print(error)
+            
+        
+        }
+    
+    return notes
+        
+    
+        
+    }
+    
+    func updateNote(id: Int, description: String) -> Bool{
+        
+        let update = noteTable.filter(noteID == id)
+        
+        do{
+        
+            try self.database.run(update.update(Ndescription <- description))
+            return true
+            
+        }
+        
+        catch{
+            print(error)
+            return false
+        
+        }
+    
+    
+    }
+    
+    func deleteNote(id: Int) -> Bool {
+        
+        let delete = noteTable.filter(noteID == id)
+        
+        do {
+        
+            try self.database.run(delete.delete())
+            return true
+        }
+        
+        catch{
+        
+           print(error)
+            return false
+        }
+        
+    
+    
     }
     
     
