@@ -27,7 +27,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 //        let appDelegate = UIApplication.shared.delegate as! AppDelegate
 //        appDelegate.window?.rootViewController = reviewController
         
-         self.performSegue(withIdentifier: "login", sender: self)
+         //self.performSegue(withIdentifier: "login", sender: self)
         let email = textField2.text
         let password = textField.text
         
@@ -51,6 +51,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             else {
             
             self.notifyUser(["Please check your email or password, and try again!"])
+                
             }
             
             
