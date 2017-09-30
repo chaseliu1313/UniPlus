@@ -259,6 +259,10 @@
                                             <color key="titleColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="register:" destination="IHk-gc-aQM" eventType="touchUpInside" id="Mpe-8Z-pqB"/>
+                                            <segue destination="wkP-SP-Ww8" kind="showDetail" identifier="RegiLogin" id="f1y-nP-MdY"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" background="textFeild" translatesAutoresizingMaskIntoConstraints="NO" id="obE-Tq-CUi">
                                         <rect key="frame" x="32" y="89" width="182" height="30"/>
@@ -275,8 +279,8 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peA-MN-pGg">
-                                        <rect key="frame" x="42" y="289" width="157" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peA-MN-pGg">
+                                        <rect key="frame" x="8" y="289" width="227" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -294,7 +298,7 @@
                                     <constraint firstItem="peA-MN-pGg" firstAttribute="top" secondItem="7MR-Gx-Yof" secondAttribute="bottom" constant="8" symbolic="YES" id="J2M-Gp-4kI">
                                         <variation key="heightClass=compact-widthClass=compact" constant="-258"/>
                                     </constraint>
-                                    <constraint firstAttribute="trailing" secondItem="peA-MN-pGg" secondAttribute="trailing" constant="41" id="N3c-c6-lcC"/>
+                                    <constraint firstAttribute="trailing" secondItem="peA-MN-pGg" secondAttribute="trailing" constant="5" id="N3c-c6-lcC"/>
                                     <constraint firstItem="7MR-Gx-Yof" firstAttribute="centerX" secondItem="Vzy-zp-IKA" secondAttribute="centerX" id="P5j-qR-nDO"/>
                                     <constraint firstItem="obE-Tq-CUi" firstAttribute="leading" secondItem="Arx-3d-Ype" secondAttribute="leading" id="PF1-ZV-LVv"/>
                                     <constraint firstItem="MOy-1e-CKb" firstAttribute="leading" secondItem="obE-Tq-CUi" secondAttribute="leading" id="PWp-wQ-pNa"/>
@@ -305,7 +309,7 @@
                                     <constraint firstItem="obE-Tq-CUi" firstAttribute="trailing" secondItem="Arx-3d-Ype" secondAttribute="trailing" id="d8w-x4-RPj"/>
                                     <constraint firstItem="Arx-3d-Ype" firstAttribute="top" secondItem="Vzy-zp-IKA" secondAttribute="top" constant="127" id="gCh-Ov-1UE"/>
                                     <constraint firstAttribute="height" constant="396" id="iUh-Uz-s7E"/>
-                                    <constraint firstItem="peA-MN-pGg" firstAttribute="leading" secondItem="Vzy-zp-IKA" secondAttribute="leading" constant="42" id="mQn-l8-LuM"/>
+                                    <constraint firstItem="peA-MN-pGg" firstAttribute="leading" secondItem="Vzy-zp-IKA" secondAttribute="leading" constant="8" id="mQn-l8-LuM"/>
                                     <constraint firstItem="MOy-1e-CKb" firstAttribute="trailing" secondItem="obE-Tq-CUi" secondAttribute="trailing" id="nWW-zX-vzH"/>
                                     <constraint firstAttribute="trailing" secondItem="Arx-3d-Ype" secondAttribute="trailing" constant="26" id="ova-nI-UDl"/>
                                     <constraint firstItem="peA-MN-pGg" firstAttribute="top" secondItem="5Qq-Fm-YtO" secondAttribute="bottom" constant="56" id="tpk-9V-3cj">
@@ -322,6 +326,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="confirm" destination="5Qq-Fm-YtO" id="zE5-Y8-MHr"/>
+                        <outlet property="email" destination="Arx-3d-Ype" id="y4m-ZC-IIO"/>
+                        <outlet property="name" destination="obE-Tq-CUi" id="2O0-0E-vIW"/>
+                        <outlet property="notification" destination="peA-MN-pGg" id="e2U-p6-x8A"/>
+                        <outlet property="password" destination="q0u-20-OQc" id="ocZ-wI-DOg"/>
                         <outlet property="popupView" destination="Vzy-zp-IKA" id="jQ6-Nh-8j4"/>
                     </connections>
                 </viewController>
@@ -1656,6 +1665,7 @@
         <image name="write" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="f1y-nP-MdY"/>
         <segue reference="f1o-NY-5FN"/>
     </inferredMetricsTieBreakers>
 </document>
