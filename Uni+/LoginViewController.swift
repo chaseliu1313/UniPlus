@@ -16,21 +16,49 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var textField2: UITextField!
-    let db = DbManager()
+    
+    let login = LoginViewModel()
 
     
     @IBAction func login(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        appDelegate.window?.rootViewController = reviewController
         
-        let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
+         self.performSegue(withIdentifier: "login", sender: self)
+        let email = textField2.text
+        let password = textField.text
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let verify = self.login.verifiy(email: email, password: password)
         
-        appDelegate.window?.rootViewController = reviewController
+        if verify.0 == false {
         
-        self.performSegue(withIdentifier: "login", sender: self)
+            self.notifyUser(verify.1)
+        
+        }
+        
+        else {
+        
+            let result = login.login(email: email, password: password)
+            
+            
+            if result.0{
+                 self.performSegue(withIdentifier: "login", sender: self)
+            
+            }
+            else {
+            
+            self.notifyUser(["Please check your email or password, and try again!"])
+            }
+            
+            
+           
+        
+        }
+        
+        
         
         
         
@@ -38,9 +66,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         
+        DbManager.shared.createTable()
         
-        db.createDB()
-        db.createTable()
         super.viewDidLoad()
         textField.delegate = self
         textField2.delegate = self
@@ -61,5 +88,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     
+    //customized alert view function
+    func notifyUser( _ message: [String] ) -> Void
+    {
+        let meg: String = message[0]
+        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
+    }
     
 }

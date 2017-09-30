@@ -21,7 +21,7 @@ class FirstTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.backgroundView = UIImageView(image: UIImage(named: "Rectangle"))
+        tableView.backgroundView = UIImageView(image: UIImage(named: "blueBackGround"))
         tableView.backgroundView?.contentMode = .scaleAspectFill
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

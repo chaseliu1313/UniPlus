@@ -16,8 +16,7 @@ class NoteViewModel{
     var note1 = Note.init(date: "2017-09-29", description: "firstNote")
     var note2 = Note.init(date: "2017009-09", description: "secondNote")
     
-    let db = DbManager()
-
+    
     
     
     

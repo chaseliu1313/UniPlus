@@ -25,7 +25,7 @@ class NoteControllerViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         
         
-        NoteTable.backgroundView = UIImageView(image: UIImage(named: "Rectangle 3"))
+        NoteTable.backgroundView = UIImageView(image: UIImage(named: "purpleBackGround"))
         NoteTable.backgroundView?.contentMode = .scaleAspectFill
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()

@@ -10,9 +10,10 @@
 import Foundation
 import SQLite
 
-class DbManager{
+ class DbManager{
     
-    
+   
+   static let shared = DbManager()
     
     //let user: User?
     var database : Connection!
@@ -54,9 +55,9 @@ class DbManager{
     let Ndescription = Expression<String>("description")
     
     
-    init() {
+    private init() {
         self.createDB()
-        self.createTable()
+        
     }
     
     //create local storage

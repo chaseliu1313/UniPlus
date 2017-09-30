@@ -13,7 +13,7 @@ class TimeTablePopoverViewController: UIViewController {
     @IBOutlet weak var Popover: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-       Popover.backgroundView = UIImageView(image: UIImage(named: "Rectangle"))
+       Popover.backgroundView = UIImageView(image: UIImage(named: "blueBackGround"))
         
        Popover.backgroundView?.contentMode = .scaleAspectFill
         

@@ -10,17 +10,15 @@ import Foundation
 
 
 class User{
-
-    let id :Int?
-    let name: String?
-    let email: String?
     
-   // static let shared = User()
+    var id :Int = 0
+    var name: String = ""
+    var email: String = ""
+    
+  static let shared = User()
 
-    private init(id: Int, name: String, email: String) {
-        self.id = id
-        self.name = name
-        self.email = email
+    private init() {
+      
     }
 
 }

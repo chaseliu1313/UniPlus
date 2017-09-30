@@ -14,7 +14,7 @@ class SplitDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailTable.backgroundView = UIImageView(image: UIImage(named: "Rectangle 3"))
+        detailTable.backgroundView = UIImageView(image: UIImage(named: "purpleBackGround"))
         detailTable.backgroundView?.contentMode = .scaleAspectFill
         UITableViewCell.appearance().backgroundColor = UIColor.clear
 
