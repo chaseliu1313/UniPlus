@@ -21,8 +21,10 @@ class DetialViewController: UIViewController, UITextViewDelegate {
         textView.text = text
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         textView.becomeFirstResponder()
+        
     }
 
+    // send the edited information back to the note screen
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         masterView.newRowText = textView.text

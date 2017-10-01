@@ -44,6 +44,7 @@ class NoteControllerViewController: UIViewController {
         
     }
     
+    //handle change from the editing screen
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
@@ -70,23 +71,16 @@ class NoteControllerViewController: UIViewController {
     //insert new row at the top and go into the detail page
     func addNotes(){
         
+
         
-//        if (NoteTable.isEditing) {
-//            NoteTable.isEditing = false
-//            return
-//        }
-        
-        let name: String = "New Note \(noteVM.loadedNote.count)"
+        let name: String = "New Note"
         
         let note: Note = noteVM.formNote(content: name)
         note.description = name
         
         if noteVM.addNote(note: note) {
         
-//            let rowNum = noteVM.loadedNote.count
-//            let indexPath:IndexPath = IndexPath(row: rowNum, section:0)
-//            NoteTable.insertRows(at: [indexPath], with: .automatic)
-//            NoteTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+
             self.performSegue(withIdentifier: "Detail", sender: nil)
             NoteTable.reloadData()
         }
@@ -97,9 +91,7 @@ class NoteControllerViewController: UIViewController {
             
         }
         
-    
-        
-      
+  
         
     }
     
@@ -111,7 +103,7 @@ class NoteControllerViewController: UIViewController {
     }
     
    
-    
+    //send note object information through segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let detailView: DetialViewController = segue.destination as! DetialViewController
@@ -190,7 +182,7 @@ extension NoteControllerViewController:  UITableViewDataSource, UITableViewDeleg
             if noteVM.delete(note: note) {
             
                 noteVM.loadedNote.remove(at: indexPath.row)
-                NoteTable.deleteRows(at: [indexPath], with: .fade)
+               
                 self.load()
                 
                 
