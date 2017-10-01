@@ -69,7 +69,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        
+        DbManager.shared.drop()
         DbManager.shared.createTable()
         
         super.viewDidLoad()

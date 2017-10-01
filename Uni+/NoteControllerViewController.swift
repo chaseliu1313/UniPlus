@@ -53,16 +53,17 @@ class NoteControllerViewController: UIViewController {
         return
             
         }
-        data[selectedRow] = newRowText
         
-        newRowText = data[selectedRow]
-        
-        if newRowText == "" {
-            data.remove(at:selectedRow)
-            
+        let note = noteVM.loadedNote[selectedRow]
+        note.description = newRowText
+        if noteVM.edit(note: note){
+            NoteTable.reloadData()
         }
-        NoteTable.reloadData()
-        save()
+        else{
+        print("editing did not save")
+        }
+        
+        
     }
     
     
@@ -75,13 +76,30 @@ class NoteControllerViewController: UIViewController {
 //            return
 //        }
         
-        let name: String = "New Note"
-        data.insert(name, at: 0)
+        let name: String = "New Note \(noteVM.loadedNote.count)"
         
-        let indexPath:IndexPath = IndexPath(row: 0, section:0)
-        NoteTable.insertRows(at: [indexPath], with: .automatic)
-        NoteTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
-        self.performSegue(withIdentifier: "Detail", sender: nil)
+        let note: Note = noteVM.formNote(content: name)
+        note.description = name
+        
+        if noteVM.addNote(note: note) {
+        
+//            let rowNum = noteVM.loadedNote.count
+//            let indexPath:IndexPath = IndexPath(row: rowNum, section:0)
+//            NoteTable.insertRows(at: [indexPath], with: .automatic)
+//            NoteTable.selectRow(at: indexPath, animated: true, scrollPosition: .none)
+            self.performSegue(withIdentifier: "Detail", sender: nil)
+            NoteTable.reloadData()
+        }
+        
+        else {
+        
+        print("error")
+            
+        }
+        
+    
+        
+      
         
     }
     
@@ -95,24 +113,21 @@ class NoteControllerViewController: UIViewController {
    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
         let detailView: DetialViewController = segue.destination as! DetialViewController
-        selectedRow = NoteTable.indexPathForSelectedRow!.row
+        
+        selectedRow = noteVM.loadedNote.count - 1
         detailView.masterView = self
-        detailView.setText(input: data[selectedRow]) //data[selectedRow]
+        detailView.setText(input: noteVM.loadedNote[selectedRow].description)
+        print(noteVM.loadedNote[selectedRow].id)
+        
     }
     
-    // data saving and loading method for assignment 1
-    func save(){
-       //UserDefaults.standard.set(note.notes, forKey: "userNotes")
-        UserDefaults.standard.synchronize()
-    }
+   
     
     func load(){
-        if let loadedData = UserDefaults.standard.value(forKey: "userNotes")as? [String]{
-          data = loadedData
-            NoteTable.reloadData()
-        
-        }
+        noteVM.loadNotes()
+        NoteTable.reloadData()
     }
     
     //open side menu
@@ -159,6 +174,8 @@ extension NoteControllerViewController:  UITableViewDataSource, UITableViewDeleg
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        self.newRowText = noteVM.loadedNote[indexPath.row].description
         self.performSegue(withIdentifier: "Detail", sender: nil)
         
         
@@ -169,12 +186,24 @@ extension NoteControllerViewController:  UITableViewDataSource, UITableViewDeleg
         
         if editingStyle == UITableViewCellEditingStyle.delete{
             
-            data.remove(at: indexPath.row)
-            NoteTable.reloadData()
-            NoteTable.deleteRows(at: [indexPath], with: .fade)
+            let note = noteVM.loadedNote[indexPath.row]
+            if noteVM.delete(note: note) {
+            
+                noteVM.loadedNote.remove(at: indexPath.row)
+                NoteTable.deleteRows(at: [indexPath], with: .fade)
+                self.load()
+                
+                
+            
+            }
+            else{
+            print("delete failed")
+            }
+            
+           
             
         }
-     save()
+    
     }
         
 }

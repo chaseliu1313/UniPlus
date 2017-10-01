@@ -12,6 +12,7 @@ class NoteViewModel{
     
     
     var loadedNote :[Note] = []
+    var noteCache: [String] = []
   
     var note1 = Note.init(date: "2017-09-29", description: "firstNote")
     var note2 = Note.init(date: "2017009-09", description: "secondNote")
@@ -90,20 +91,27 @@ class NoteViewModel{
         
         var title: String
         
+        
+        if content.characters.count <= 10 {
+        return content
+        }
+        
+        else {
+        
         if content.contains("."){
         
         title = content.components(separatedBy: ".").first!
         
         }
         else {
-        let index = content.index(content.startIndex, offsetBy: 30)
+        let index = content.index(content.startIndex, offsetBy: content.characters.count/2 )
         title = content.substring(to: index)
         
         
         }
         
         return title
-    
+        }
     
     }
     

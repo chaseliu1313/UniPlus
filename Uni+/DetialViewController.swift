@@ -12,7 +12,9 @@ class DetialViewController: UIViewController, UITextViewDelegate {
     
     var text: String = ""
     var masterView:NoteControllerViewController!
-
+    
+    
+    
     @IBOutlet weak var textView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +28,7 @@ class DetialViewController: UIViewController, UITextViewDelegate {
         masterView.newRowText = textView.text
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+   
     func setText(input: String){
         text = input
         

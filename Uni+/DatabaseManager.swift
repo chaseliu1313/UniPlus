@@ -52,7 +52,7 @@ import SQLite
     let TTdescription = Expression<String>("description")
     
     //notesTable
-    let noteTable = Table("calendar")
+    let noteTable = Table("notes")
     
     let noteID = Expression<Int>("calID")
     let Nuser_id = Expression<Int>("userID")
@@ -126,6 +126,7 @@ import SQLite
         }
         
         let createTable4 = self.noteTable.create{(table) in
+            
             table.column(self.noteID, primaryKey: .autoincrement)
             table.column(self.Nuser_id)
             table.column(self.Ndate)
@@ -138,15 +139,43 @@ import SQLite
         
         do {
             try self.database.run(createTable)
-            try self.database.run(createTable2)
-            try self.database.run(createTable3)
-            try self.database.run(createTable4)
+            
+            
+            
             print("create successful")
         }
         catch{
             
             print(error)
             
+            
+        }
+        
+        do {
+            try self.database.run(createTable2)
+          print("table2")
+        }
+        catch{
+            print(error)
+        
+        }
+        
+        do{
+        try self.database.run(createTable3)
+            print("table3")
+        }
+        catch{
+            print(error)
+        
+        }
+        
+        do{
+        try self.database.run(createTable4)
+            print("table4")
+        }
+        
+        catch{
+            print(error)
         }
         
         
@@ -280,13 +309,13 @@ import SQLite
         
         
         do{
-            try  self.database.run(self.usersTable.drop())}
+            try  self.database.run(self.calendarTable.drop())}
             
         catch
         {
             print(error)
         }
-        print("userTable has droped")
+        print("calendar has droped")
         
     }
     
