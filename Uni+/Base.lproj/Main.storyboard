@@ -136,7 +136,7 @@
                                 <state key="normal" title="GO!" backgroundImage="ButtonSmall"/>
                                 <connections>
                                     <action selector="login:" destination="6uv-H2-iQt" eventType="touchUpInside" id="XDJ-zH-wSl"/>
-                                    <segue destination="wkP-SP-Ww8" kind="modal" identifier="login" id="eA8-i5-5Nz"/>
+                                    <segue destination="wkP-SP-Ww8" kind="modal" identifier="login" modalTransitionStyle="flipHorizontal" id="eA8-i5-5Nz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-gV-elN">
@@ -1476,7 +1476,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqh-mT-3c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1288" y="735"/>
+            <point key="canvasLocation" x="-777" y="616"/>
         </scene>
         <!--Calendar-->
         <scene sceneID="MHD-JQ-dBd">
@@ -1665,7 +1665,7 @@
         <image name="write" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f1y-nP-MdY"/>
+        <segue reference="eA8-i5-5Nz"/>
         <segue reference="f1o-NY-5FN"/>
     </inferredMetricsTieBreakers>
 </document>

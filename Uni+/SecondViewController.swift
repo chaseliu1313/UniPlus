@@ -53,7 +53,8 @@ class SecondViewController: UIViewController {
 
     
     func doSomething(){
-        print("function not ready")
+        
+        print(User.shared.id)
     
     
     }

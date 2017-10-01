@@ -17,7 +17,7 @@ class DetialViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.text = text
-        // Do any additional setup after loading the view.
+        self.navigationItem.leftBarButtonItem?.tintColor = UIColor.white
         textView.becomeFirstResponder()
     }
 

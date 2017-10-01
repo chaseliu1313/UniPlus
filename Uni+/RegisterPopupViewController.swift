@@ -42,10 +42,12 @@ class RegisterPopupViewController: UIViewController, UITextFieldDelegate {
         let password = self.password.text
         let confirm = self.confirm.text
         
+        //input verification
         let verify = self.regi.verifyRege(name: name, email: email, password: password, confirm: confirm)
         
         if  verify.0 {
             
+            //registration method with auto signin
             let result = self.regi.register(email: email, name: name, password: password)
             self.notification.text = " "
             
@@ -56,7 +58,8 @@ class RegisterPopupViewController: UIViewController, UITextFieldDelegate {
                 
                 let when = DispatchTime.now() + 5
                 DispatchQueue.main.asyncAfter(deadline: when) {
-                    
+                    print(User.shared.id)
+                    print(User.shared.name)
                     self.performSegue(withIdentifier: "RegiLogin", sender: self)
                    
                 }

@@ -22,12 +22,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = reviewController
+         
         
-         self.performSegue(withIdentifier: "login", sender: self)
         let email = textField2.text
         let password = textField.text
         
@@ -46,6 +42,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             if result.0{
                  self.performSegue(withIdentifier: "login", sender: self)
+                
+                // instantiate side menu
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = reviewController
+//                
             
             }
             else {

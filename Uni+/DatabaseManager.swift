@@ -15,6 +15,11 @@ import SQLite
    
    static let shared = DbManager()
     
+    private init() {
+        self.createDB()
+        
+    }
+    
     //let user: User?
     var database : Connection!
     
@@ -55,10 +60,7 @@ import SQLite
     let Ndescription = Expression<String>("description")
     
     
-    private init() {
-        self.createDB()
-        
-    }
+   
     
     //create local storage
     func createDB() {
@@ -293,7 +295,7 @@ import SQLite
     
     //note table functions
     
-    func addNote(note: Note, id: Int){
+    func addNote(note: Note, id: Int) -> Bool{
     
     let userID = id
     let date = note.date
@@ -304,22 +306,25 @@ import SQLite
         do{
             try self.database.run(insert)
             print("inserted Note for \(userID)")
+            return true
             
         }
         catch{
         
             print(error)
+            return false
         }
     
     }
     
-    func loadNote() -> [Note]{
+    func loadNote(id: Int) -> [Note]{
     
         var notes: [Note] = []
+        let filtered = self.noteTable.filter(Nuser_id == id)
         
         do{
         
-            for note in try self.database.prepare(noteTable){
+            for note in try self.database.prepare(filtered){
             
                 let newNote = Note.init(id: note[noteID], date: note[Ndate], description: note[Ndescription])
                 notes.append(newNote)

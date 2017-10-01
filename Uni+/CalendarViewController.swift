@@ -176,7 +176,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
         formatter.dateFormat = "yyyy"
         let year = formatter.string(from: date)
-        formatter.dateFormat = "MMMM"
+        formatter.dateFormat = "MM"
         let month = formatter.string(from: date)
         formatter.dateFormat = "dd"
         let day = formatter.string(from: date)
@@ -184,10 +184,9 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         let weekday = formatter.string(from: date)
         
         
-        print(year)
-        print(month)
-        print(day)
-        print(weekday)
+        print("\(year)-\(month)-\(day)-\(weekday)")
+       
+        
         
         
 
