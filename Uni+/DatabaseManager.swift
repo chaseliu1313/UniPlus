@@ -35,7 +35,7 @@ import SQLite
     let calendarTable = Table("calendar")
     
     let calID = Expression<Int>("calID")
-    let user_id = Expression<Int>("userID")
+    let user_id = Expression<Int>("caluserID")
     let date = Expression<String>("date")
     let endDate = Expression<String>("endDate")
     let people = Expression<String>("people")
@@ -45,19 +45,19 @@ import SQLite
     let timeTTable = Table("timetable")
     
     let TTID = Expression<Int>("TTID")
-    let user_id2 = Expression<Int>("userID")
-    let TTdate = Expression<String>("date")
-    let TTendDate = Expression<String>("endDate")
-    let TTpeople = Expression<String>("people")
-    let TTdescription = Expression<String>("description")
+    let user_id2 = Expression<Int>("userID2")
+    let TTdate = Expression<String>("TTdate")
+    let TTendDate = Expression<String>("TTendDate")
+    let TTpeople = Expression<String>("TTpeople")
+    let TTdescription = Expression<String>("TTdescription")
     
     //notesTable
     let noteTable = Table("notes")
     
-    let noteID = Expression<Int>("calID")
-    let Nuser_id = Expression<Int>("userID")
-    let Ndate = Expression<String>("date")
-    let Ndescription = Expression<String>("description")
+    let noteID = Expression<Int>("noteID")
+    let Nuser_id = Expression<Int>("NuserID")
+    let Ndate = Expression<String>("noteDate")
+    let Ndescription = Expression<String>("Ndescription")
     
     
    
@@ -208,13 +208,15 @@ import SQLite
     func matchUser(email: String, password: String) -> Int? {
         var userID : Int?
         
-        let find = self.usersTable.select(id).filter(self.email == email).filter(self.password == password)
+        let find = self.usersTable.filter(self.email == email).filter(self.password == password)
         
         do{
             
             for user in try self.database.prepare(find){
                 
                 userID = user[id]
+                User.shared.id = user[id]
+                User.shared.name = user[name]
                 
                 
             }
@@ -232,92 +234,131 @@ import SQLite
     
     
     //calendar table functions
-    func insertInfoCal(userID: Int, date: String, endDate: String, person: String, description: String ){
+    func insertInfoCal(userID: Int, date: String, endDate: String, person: String, description: String ) -> Bool{
         
         
         let insert = self.calendarTable.insert(self.user_id <- userID, self.date <- date, self.endDate <- endDate, self.people <- person, self.description <- description)
         
         do {
             try self.database.run(insert)
-            print("inserted \(userID) and \(date) and \(endDate) and \(endDate) and \(person) and \(description)")
+            print("inserted \(userID) and \(date) and \(endDate) and \(person) and \(description)")
+            return true
         }
             
         catch {
-            print(error)
-            
-            
-        }
-        
-        
-    }
-    
-    
-    
-    
-    
-    func showInfo(){
-        
-        do {
-            let users = try self.database.prepare(self.usersTable)
-            
-            for user in users {
-                
-                print("userID : \(user[self.id]), name: \(user[self.name]), email: \(user[self.email])")
-            }
-            print(users)
-        }
-        catch {
             
             print(error)
-        }
-        
-        
-    }
-    
-    func update(){
-        
-        let userID = 1
-        let name = "Jane"
-        let email = "DOE@123.com"
-        
-        let user = self.usersTable.filter(self.id == userID)
-        let update = user.update(self.name <- name, self.email <- email)
-        
-        
-        do {
-            try self.database.run(update)
-        }
-        catch{
-            print(error)}
-        
-    }
-    
-    func delete(){
-        
-        let userID = 1
-        let user = self.usersTable.filter(self.id == userID)
-        let delete = user.delete()
-        do{
-            try self.database.run(delete)
-        }
-        catch{
-            print(error)
-        }
-    }
-    
-    func drop(){
-        
-        
-        do{
-            try  self.database.run(self.calendarTable.drop())}
             
-        catch
+            return false
+        }
+        
+        
+    }
+    
+    func addCalEvent(cal: CalendarEvent) -> Bool {
+    
+    let userID = User.shared.id
+    let date = cal.date
+    let endDate = cal.endDate
+    let person = cal.people
+    let des = cal.description
+    
+        if self.insertInfoCal(userID: userID, date: date, endDate: endDate, person: person, description: des)
+        
         {
-            print(error)
+        
+            return true
         }
-        print("calendar has droped")
+    
+        else{
+            
+        return false
+            
+        }
+    
+    }
+    
+    
+    func loadCalEvents(id: Int, InputDate: String) -> [CalendarEvent] {
+    
+        var events : [CalendarEvent] = []
+        
+        let filter = self.calendarTable.filter(self.user_id == id).filter(self.date == InputDate)
+        
+        do{
+        
+            for calevent in try self.database.prepare(filter) {
+                
+                let sid = calevent[calID]
+                let sdate = calevent[date]
+                let sendDate = calevent[endDate]
+                let speople = calevent[people]
+                let sdes = calevent[description]
+               
+            
+                let calEvent = CalendarEvent.init(id: sid, date: sdate, endDate: sendDate, description: sdes, people: speople)
+                
+           events.append(calEvent)
+                
+                
+            
+            }
+        }
+        catch{
+        
+            print(error)
+        
+        }
+    return events
+    
+    }
+    
+    func loadEvents() {
+    
+        
+
+        do{
+            for calevent in try self.database.prepare(calendarTable){
+            
+                
+                
+                
+                print(calevent[people])
+               
+            }
+        }
+        catch {
+        print(error)
+        }
+        
+        
         
     }
+    
+    
+    func deleteCal(id: Int) -> Bool
+    {
+    let target = calendarTable.filter(calID == id)
+        
+        do{
+        
+            try self.database.run(target.delete())
+            return true
+        
+        
+        }
+        
+        catch{
+        
+        print(error)
+         return false
+        }
+    
+    
+    }
+
+ 
+   
     
     
     
@@ -355,6 +396,7 @@ import SQLite
         
             for note in try self.database.prepare(filtered){
             
+                
                 let newNote = Note.init(id: note[noteID], date: note[Ndate], description: note[Ndescription])
                 notes.append(newNote)
             
@@ -413,5 +455,27 @@ import SQLite
     
     }
     
+    //drop table 
+    
+    
+    func drop(){
+        
+        
+        do{
+            try  self.database.run(self.calendarTable.drop())
+          
+            try  self.database.run(self.noteTable.drop())
+            try  self.database.run(self.timeTTable.drop())
+            
+        
+        }
+            
+        catch
+        {
+            print(error)
+        }
+        print("calendar has droped")
+        
+    }
     
 }

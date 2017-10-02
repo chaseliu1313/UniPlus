@@ -67,12 +67,41 @@ class LoginViewModel{
         User.shared.id  = userID
         User.shared.email = userEmail
         
+        
         return(true, User.shared)
     
         
     }
     
 
+    func saveLogin(email: String, password: String)
+    {
+        
+        UserDefaults.standard.set(email, forKey: "email")
+        UserDefaults.standard.set(password, forKey: "password")
+        
+    }
+    
+    func autoLogin() -> Bool{
+        
+        var verify = false
+        
+        if let email = UserDefaults.standard.string(forKey: "email"), let password = UserDefaults.standard.string(forKey: "password"){
+            
+            
+            if self.login(email: email, password: password).0 {
+                
+                verify = true
+                
+            }
+            else {verify = false}
+            
+        }
+        
+        return verify
+        
+        
+    }
 
 
 }
@@ -183,6 +212,7 @@ class RegiViewModel: LoginViewModel{
   
     
     }
+    
     
 
 

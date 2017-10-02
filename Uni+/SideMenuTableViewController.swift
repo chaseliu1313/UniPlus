@@ -30,5 +30,11 @@ class SideMenuTableViewController: UITableViewController {
         print("something")
     }
   
+    @IBAction func logout(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "logout", sender: self)
+        StatusManager.setLogout()
+        
+    }
 
 }

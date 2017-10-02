@@ -9,21 +9,22 @@
 import UIKit
 import JTAppleCalendar
 
-class CalendarViewController: UIViewController{
+class CalendarViewController: UIViewController {
     
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var calenaerView: JTAppleCalendarView!
     
-    @IBOutlet weak var detailTable: UITableView!
+
+ 
     
-  
+
     
    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     private var collapseMaster = true
-   
-    
+       
+    @IBOutlet weak var addbutton: UIBarButtonItem!
     
     
     
@@ -31,6 +32,7 @@ class CalendarViewController: UIViewController{
     let outsideMonthColor = UIColor.darkGray
     let monthColor = UIColor.black
     
+    var selected = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,20 +40,18 @@ class CalendarViewController: UIViewController{
     
         
         
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            
+        
+            
+        }
+        
     
        //setting navigation bar button and function
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        let addB = UIBarButtonItem.init(barButtonSystemItem: .add, target: self, action: #selector(addDate))
-        
-        self.navigationItem.rightBarButtonItem = addB
-        
-         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
-        
-        detailTable.backgroundColor = UIColor.clear
+      
         UITableViewCell.appearance().backgroundColor = UIColor.clear
         splitViewController?.delegate = self
         
@@ -64,6 +64,28 @@ class CalendarViewController: UIViewController{
         
     }
     
+    @IBAction func add(_ sender: UIBarButtonItem) {
+        
+        
+        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
+            
+            self.notifyUser(["Please add calender event in portrait"])
+        }
+        else if self.selected == "" {
+           
+            self.notifyUser(["Please select a date"])
+        
+        }
+        else {
+        
+        self.performSegue(withIdentifier: "addCalendarEvent", sender: self)
+        }
+        
+        
+        
+        
+        
+    }
     func setupCalendarView(){
         calenaerView.minimumLineSpacing = 0
         calenaerView.minimumInteritemSpacing = 0
@@ -78,10 +100,19 @@ class CalendarViewController: UIViewController{
         
     }
     
+   
     
-    func addDate(){
-        print("functions not ready yet")
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.destination is addClendarEventViewController {
+        
+            let addVC = segue.destination as? addClendarEventViewController
+            addVC?.date = self.selected
+        
+        }
+        
     }
+    
     
     
     func sideMenu()
@@ -101,6 +132,8 @@ class CalendarViewController: UIViewController{
         }
         
     }
+    
+    
     
     
 }
@@ -183,11 +216,14 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         formatter.dateFormat = "EEEE"
         let weekday = formatter.string(from: date)
         
-        
-        print("\(year)-\(month)-\(day)-\(weekday)")
+        self.selected = "\(year)-\(month)-\(day)-\(weekday)"
+        print(self.selected)
        
+        let notificationName = Notification.Name(rawValue:notificationKey)
         
+        let dataForPass = ["date": self.selected]
         
+        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: dataForPass)
         
 
         
@@ -226,17 +262,30 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     }
     
-    
-    
+  
     
 }
 
 
+
+//split view configuration
 extension CalendarViewController : UISplitViewControllerDelegate {
     
 //show the master view by default
     func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        
         return true
+    }
+    
+    //customized alert view function
+    func notifyUser( _ message: [String] ) -> Void
+    {
+        let meg: String = message[0]
+        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
     }
     
     

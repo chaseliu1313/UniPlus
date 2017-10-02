@@ -118,15 +118,25 @@ class CalendarEvent:DateEventDecorator{
     var description: String
     var type: objType = objType.CalendarEvent
     var endDate:String
-    var people: String = ""
+    var people: String
     
     
-    init(id: Int, date:String,endDate:String, description: String) {
+    init(date:String,endDate:String, description: String,people: String) {
+        self.id = 0
+        self.date = date
+        self.endDate = endDate
+        self.description = description
+        self.people = people
+    }
+    
+    
+    init(id: Int, date:String, endDate:String, description: String,people: String) {
         
         self.id = id
         self.date = date
         self.endDate = endDate
         self.description = description
+        self.people = people
     }
     
     func setDescription(input: String) {

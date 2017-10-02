@@ -10,17 +10,16 @@ import Foundation
 
 struct StatusManager {
 
- 
 
-    static func setLogin () -> Bool{
+    static func setLogin () {
         
         
         
         UserDefaults.standard.set(true, forKey: "isLoggedIn")
         UserDefaults.standard.synchronize()
         
-        let isLoggedIn = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        return isLoggedIn
+         
+        
     
     
     }
@@ -64,5 +63,37 @@ struct StatusManager {
     }
     
     
+
+}
+
+struct SystemManager{
+
+
+    static func getCurrentDate() -> String {
+        
+        let formatter = DateFormatter()
+        let date = Date()
+        
+        formatter.dateFormat = "yyyy"
+        let year = formatter.string(from: date)
+        formatter.dateFormat = "MM"
+        let month = formatter.string(from: date)
+        formatter.dateFormat = "dd"
+        let day = formatter.string(from: date)
+        formatter.dateFormat = "EEEE"
+        let weekday = formatter.string(from: date)
+        
+        let currentDate = "\(year)-\(month)-\(day)-\(weekday)"
+        
+        return currentDate
+        
+    }
+
+
+
+
+
+
+
 
 }

@@ -41,7 +41,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             
             if result.0{
+                
+                 StatusManager.setLogin()
+                
+                login.saveLogin(email: email!, password: password!)
                  self.performSegue(withIdentifier: "login", sender: self)
+               
                 
                 // instantiate side menu
 //                let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -69,8 +74,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidLoad() {
-        DbManager.shared.drop()
+       
+        
+        
         DbManager.shared.createTable()
+    
+        let autoLogin = UserDefaults.standard.bool(forKey: "isLoggedIn")
+        if autoLogin && login.autoLogin() {
+            
+            
+            
+        
+        self.performSegue(withIdentifier: "login", sender: self)
+            print(User.shared.id)
+            print(User.shared.email)
+            
+        }
+       
         
         super.viewDidLoad()
         textField.delegate = self

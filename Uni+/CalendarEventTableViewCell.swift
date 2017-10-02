@@ -1,18 +1,17 @@
 //
-//  ClendarDetailTableViewCell.swift
+//  CalendarEventTableViewCell.swift
 //  Uni+
 //
-//  Created by Chase on 17/9/17.
+//  Created by Chase on 2/10/17.
 //  Copyright © 2017 Chase Liu. All rights reserved.
 //
 
 import UIKit
 
-class ClendarDetailTableViewCell: UITableViewCell {
+class CalendarEventTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var indicationIMG: UIImageView!
-    
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var people: UILabel!
     @IBOutlet weak var content: UILabel!
     
     override func awakeFromNib() {

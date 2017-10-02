@@ -13,6 +13,8 @@
 		5214A0491F7743EC0090BD4F /* TimeTablePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */; };
 		5214A04B1F77836E0090BD4F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A04A1F77836E0090BD4F /* Event.swift */; };
 		5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214A04C1F77A3480090BD4F /* EventTableViewCell.swift */; };
+		521BE7931F81B609008636DC /* addClendarEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BE7921F81B609008636DC /* addClendarEventViewController.swift */; };
+		521BE7951F81EEEC008636DC /* CalendarEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */; };
 		521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */; };
 		521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AB1F5298E600BAE5A6 /* CustomCell.swift */; };
 		521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */; };
@@ -20,7 +22,6 @@
 		52214ABC1F7DDCBE00FC2F86 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52214ABB1F7DDCBE00FC2F86 /* DatabaseManager.swift */; };
 		524175371F762E9500FCBE34 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 524175361F762E9500FCBE34 /* ConnectionManager.swift */; };
 		525CB07D1F6E04D00036F2A1 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */; };
-		525CB07F1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */; };
 		525CB0881F6EA7FC0036F2A1 /* StatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525CB0871F6EA7FC0036F2A1 /* StatusManager.swift */; };
 		5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */; };
 		5267D6721F76300C002A84C6 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6711F76300C002A84C6 /* CalendarViewModel.swift */; };
@@ -76,6 +77,8 @@
 		5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTablePopoverViewController.swift; sourceTree = "<group>"; };
 		5214A04A1F77836E0090BD4F /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		5214A04C1F77A3480090BD4F /* EventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		521BE7921F81B609008636DC /* addClendarEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addClendarEventViewController.swift; sourceTree = "<group>"; };
+		521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarEventTableViewCell.swift; sourceTree = "<group>"; };
 		521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		521E90AB1F5298E600BAE5A6 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetialViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 		52214ABB1F7DDCBE00FC2F86 /* DatabaseManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		524175361F762E9500FCBE34 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
-		525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClendarDetailTableViewCell.swift; sourceTree = "<group>"; };
 		525CB0801F6E35540036F2A1 /* Uni+-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Uni+-Bridging-Header.h"; sourceTree = "<group>"; };
 		525CB0871F6EA7FC0036F2A1 /* StatusManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusManager.swift; sourceTree = "<group>"; };
 		5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
@@ -220,13 +222,14 @@
 				5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */,
 				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
 				521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */,
-				525CB07E1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift */,
 				E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */,
 				5214A04C1F77A3480090BD4F /* EventTableViewCell.swift */,
 				5291FE3F1F51609E00CED242 /* WeatherCell.swift */,
 				521E90AB1F5298E600BAE5A6 /* CustomCell.swift */,
 				525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */,
 				5267D67B1F764E90002A84C6 /* SplitViewController.swift */,
+				521BE7921F81B609008636DC /* addClendarEventViewController.swift */,
+				521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */,
 				525CB0841F6E356F0036F2A1 /* SWViewController */,
 			);
 			name = Controller;
@@ -631,6 +634,7 @@
 				521E90B01F52DCD000BAE5A6 /* UserModel.swift in Sources */,
 				5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */,
 				E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */,
+				521BE7931F81B609008636DC /* addClendarEventViewController.swift in Sources */,
 				72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */,
 				5214A04B1F77836E0090BD4F /* Event.swift in Sources */,
 				52F2DD7C1F7F661900B7F7AF /* LoginRegViewModel.swift in Sources */,
@@ -641,10 +645,10 @@
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
 				E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */,
 				E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */,
-				525CB07F1F6E30900036F2A1 /* ClendarDetailTableViewCell.swift in Sources */,
 				525CB0881F6EA7FC0036F2A1 /* StatusManager.swift in Sources */,
 				5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */,
 				5291FE3E1F5149CE00CED242 /* FirstTableViewController.swift in Sources */,
+				521BE7951F81EEEC008636DC /* CalendarEventTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
