@@ -36,8 +36,8 @@ class SplitDetailViewController: UIViewController {
             
             self.navigationController?.setToolbarHidden(true, animated: true)}
         
-        
-
+        self.addObserver()
+        print("detail \(self.date)" )
         
         
     }
@@ -45,7 +45,7 @@ class SplitDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.addObserver()
-        print(self.date)
+       
         self.load()
     }
     

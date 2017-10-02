@@ -94,14 +94,8 @@ class CalendarViewController: UIViewController {
         }
     }
     
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-   
-    
+
+    // send selected date to detail add calendar view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     
         if segue.destination is addClendarEventViewController {
@@ -110,11 +104,18 @@ class CalendarViewController: UIViewController {
             addVC?.date = self.selected
         
         }
+        else if segue.destination is SplitDetailViewController{
+        
+        let detail = segue.destination as? SplitDetailViewController
+            
+            detail?.date = self.selected
+        
+        }
         
     }
     
     
-    
+    //open side menu
     func sideMenu()
     {
         
@@ -134,6 +135,10 @@ class CalendarViewController: UIViewController {
     }
     
     
+    @IBAction func showDetail(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "showDetail", sender: self)
+    }
     
     
 }
@@ -217,7 +222,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         let weekday = formatter.string(from: date)
         
         self.selected = "\(year)-\(month)-\(day)-\(weekday)"
-        print(self.selected)
        
         let notificationName = Notification.Name(rawValue:notificationKey)
         

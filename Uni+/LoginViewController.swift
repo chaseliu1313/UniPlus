@@ -22,7 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         
-         
+          self.performSegue(withIdentifier: "autologin", sender: self)
         
         let email = textField2.text
         let password = textField.text
@@ -78,6 +78,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         
         DbManager.shared.createTable()
+        
+       
     
         let autoLogin = UserDefaults.standard.bool(forKey: "isLoggedIn")
         if autoLogin && login.autoLogin() {
@@ -85,7 +87,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             
         
-        self.performSegue(withIdentifier: "login", sender: self)
+        self.performSegue(withIdentifier: "autologin", sender: self)
             print(User.shared.id)
             print(User.shared.email)
             

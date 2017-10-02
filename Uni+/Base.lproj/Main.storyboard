@@ -136,7 +136,7 @@
                                 <state key="normal" title="GO!" backgroundImage="ButtonSmall"/>
                                 <connections>
                                     <action selector="login:" destination="6uv-H2-iQt" eventType="touchUpInside" id="XDJ-zH-wSl"/>
-                                    <segue destination="wkP-SP-Ww8" kind="modal" identifier="login" modalTransitionStyle="flipHorizontal" id="eA8-i5-5Nz"/>
+                                    <segue destination="wkP-SP-Ww8" kind="showDetail" identifier="login" id="eA8-i5-5Nz"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Qqg-gV-elN">
@@ -201,7 +201,7 @@
                     <connections>
                         <outlet property="textField" destination="CXx-nj-ajL" id="JKp-wv-xPp"/>
                         <outlet property="textField2" destination="p1N-wj-mAj" id="ZqK-ak-dZr"/>
-                        <segue destination="wkP-SP-Ww8" kind="presentation" identifier="autologin" id="h31-wx-6tl"/>
+                        <segue destination="wkP-SP-Ww8" kind="showDetail" identifier="autologin" action="showViewController:sender:" id="h31-wx-6tl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bME-j4-yqj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1091,8 +1091,8 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="41" height="46"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-l8-4Z4">
-                                                            <rect key="frame" x="2" y="9" width="37" height="28"/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOM-l8-4Z4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="41" height="46"/>
                                                             <color key="backgroundColor" red="0.99254798830000002" green="1" blue="0.58521608300000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -1100,7 +1100,7 @@
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pi-0g-xE1">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Pi-0g-xE1">
                                                             <rect key="frame" x="2" y="14" width="37" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
@@ -1109,9 +1109,12 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
-                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="trailing" secondItem="5Pi-0g-xE1" secondAttribute="trailing" id="lhN-Yb-Mwy"/>
-                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="centerY" secondItem="5Pi-0g-xE1" secondAttribute="centerY" id="nMp-Kq-fTt"/>
-                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="leading" secondItem="5Pi-0g-xE1" secondAttribute="leading" id="tsx-eN-igu"/>
+                                                    <constraint firstItem="5Pi-0g-xE1" firstAttribute="trailing" secondItem="UOM-l8-4Z4" secondAttribute="trailing" constant="-2" id="3NB-DI-g0V"/>
+                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="centerX" secondItem="AVQ-SM-k02" secondAttribute="centerX" id="6rD-it-h78"/>
+                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="top" secondItem="AVQ-SM-k02" secondAttribute="topMargin" constant="-8" id="Bb1-a9-oGU"/>
+                                                    <constraint firstItem="5Pi-0g-xE1" firstAttribute="centerY" secondItem="UOM-l8-4Z4" secondAttribute="centerY" id="dnj-Ko-k6P"/>
+                                                    <constraint firstItem="5Pi-0g-xE1" firstAttribute="leading" secondItem="UOM-l8-4Z4" secondAttribute="leading" constant="2" id="hBk-D9-4f6"/>
+                                                    <constraint firstItem="UOM-l8-4Z4" firstAttribute="centerY" secondItem="AVQ-SM-k02" secondAttribute="centerY" id="msn-fc-nH9"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="5Pi-0g-xE1" id="zM6-vy-LF9"/>
@@ -1155,7 +1158,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ktK-9G-ARb" kind="showDetail" id="6oo-RA-ec9"/>
+                                    <action selector="showDetail:" destination="qfh-Eq-jcn" eventType="touchUpInside" id="frV-Ke-fFH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1195,6 +1198,7 @@
                         <outlet property="month" destination="Hf3-EE-Bl2" id="YYc-H3-Xgb"/>
                         <outlet property="year" destination="WWq-1i-SCt" id="vE1-lS-yyA"/>
                         <segue destination="leu-9u-b8d" kind="presentation" identifier="addCalendarEvent" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="GwM-E3-YeQ"/>
+                        <segue destination="ktK-9G-ARb" kind="showDetail" identifier="showDetail" id="HeF-zx-qw9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="afb-Sf-3Ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1554,7 +1558,7 @@
         <!--Calendar-->
         <scene sceneID="MHD-JQ-dBd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBarsWhenVerticallyCompact="YES" id="qXa-6x-hEP" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qXa-6x-hEP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" id="8qW-hE-4Y3"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vc8-4t-rby">
@@ -1739,8 +1743,8 @@
         <image name="write" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eA8-i5-5Nz"/>
+        <segue reference="h31-wx-6tl"/>
         <segue reference="f1o-NY-5FN"/>
-        <segue reference="gkC-sK-726"/>
+        <segue reference="HeF-zx-qw9"/>
     </inferredMetricsTieBreakers>
 </document>
