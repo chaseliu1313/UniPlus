@@ -12,7 +12,13 @@ class CalendarViewModel{
 
     var loadCalendarEvents: [CalendarEvent] = []
 
-
+    
+    static let shared = CalendarViewModel()
+    
+    private init(){
+        
+    
+    }
 
     
     func loadCalendar(date: String){

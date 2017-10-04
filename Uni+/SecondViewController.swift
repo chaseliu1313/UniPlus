@@ -32,11 +32,11 @@ class SecondViewController: UIViewController {
         curriculaTable.textEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
         curriculaTable.maximumNameLength = 12
         
-        let bt = UIBarButtonItem.init(barButtonSystemItem: .bookmarks, target: self, action: #selector(doSomething))
+       
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationItem.rightBarButtonItem = bt
+        
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         
         
@@ -51,13 +51,7 @@ class SecondViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
-    func doSomething(){
-        
-        print(User.shared.id)
-    
-    
-    }
+   
     
     //open side menu
     func sideMenu()
@@ -75,6 +69,9 @@ class SecondViewController: UIViewController {
             
             
         }
+        
+    }
+    @IBAction func addCourse(_ sender: Any) {
         
     }
 

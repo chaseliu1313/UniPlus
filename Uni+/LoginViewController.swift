@@ -48,12 +48,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                  self.performSegue(withIdentifier: "login", sender: self)
                
                 
-                // instantiate side menu
-//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//                let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
-//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-//                appDelegate.window?.rootViewController = reviewController
-//                
+//                 instantiate side menu
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
+                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+                appDelegate.window?.rootViewController = reviewController
+                
             
             }
             else {
@@ -100,7 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        
+       
         
     }
     

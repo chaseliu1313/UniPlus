@@ -11,55 +11,65 @@ import UIKit
 class addClendarEventViewController:
 UIViewController {
     
-    let calVM = CalendarViewModel()
+    let calVM = CalendarViewModel.shared
     
     @IBOutlet weak var people: UITextField!
-    @IBOutlet weak var popup: UIView!
+
     @IBOutlet weak var reminder: UITextView!
-    var date = ""
     
+    var date = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
       
         self.reminder.layer.cornerRadius = 5
-        self.popup.layer.cornerRadius = 15
         
+       
         
     }
 
   
     @IBAction func close(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+       self.performSegue(withIdentifier: "return", sender: self)
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
+    
+    @IBAction func save(_ sender: UIButton) {
+        
+        
+        if reminder.text.isEmpty {
+         self.notifyUser(["Please give me something to remind you"])
+        }
+        
         
         if people.text == "" {
-        
+            
             people.text = User.shared.name
+            
+        }
         
-        }
-        else {
-            
-            if reminder.text == "" {
-            
-                reminder.text = " set reminder here "
-            
-            }
-       
-        }
         
         let cal = calVM.formCal(date: date, people: people.text!, description: reminder.text!)
-    
-        if calVM.addCalendar(cal: cal){
-        print("added calendar event")
-        }
         
-        else {
-        return
+        if calVM.addCalendar(cal: cal){
+            
+            self.performSegue(withIdentifier: "return", sender: self)
         }
+            
+        else {
+            return
+        }
+    }
+    
+    func notifyUser( _ message: [String] ) -> Void
+    {
+        let meg: String = message[0]
+        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
         
     }
+    
+    
 
 }

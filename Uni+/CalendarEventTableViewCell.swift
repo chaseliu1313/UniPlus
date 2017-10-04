@@ -12,7 +12,8 @@ class CalendarEventTableViewCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var people: UILabel!
-    @IBOutlet weak var content: UILabel!
+    @IBOutlet weak var notes: UITextView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

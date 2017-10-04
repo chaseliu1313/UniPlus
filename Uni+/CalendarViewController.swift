@@ -39,12 +39,7 @@ class CalendarViewController: UIViewController {
       
     
         
-        
-        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
-            
-        
-            
-        }
+       
         
     
        //setting navigation bar button and function
@@ -53,7 +48,7 @@ class CalendarViewController: UIViewController {
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
       
         UITableViewCell.appearance().backgroundColor = UIColor.clear
-        splitViewController?.delegate = self
+        
         
         //open sidemenu
         sideMenu()
@@ -64,28 +59,39 @@ class CalendarViewController: UIViewController {
         
     }
     
-    @IBAction func add(_ sender: UIBarButtonItem) {
+    
+    @IBAction func addCal(_ sender: UIBarButtonItem) {
         
+        if self.selected == ""{
         
-        if UIDevice.current.orientation == UIDeviceOrientation.landscapeLeft || UIDevice.current.orientation == UIDeviceOrientation.landscapeRight {
-            
-            self.notifyUser(["Please add calender event in portrait"])
-        }
-        else if self.selected == "" {
-           
-            self.notifyUser(["Please select a date"])
-        
+        self.notifyUser(["Please Select a Date"])
         }
         else {
         
-        self.performSegue(withIdentifier: "addCalendarEvent", sender: self)
+            self.performSegue(withIdentifier: "addCal", sender: self)
+        }
+    }
+    
+    
+    @IBAction func checkDetail(_ sender: UIButton) {
+        
+        
+        if self.selected == ""{
+            
+            self.notifyUser(["Please Select a Date"])
+        }
+        else {
+            self.performSegue(withIdentifier: "showCalDetail", sender: self)
+        
         }
         
-        
-        
-        
-        
     }
+    
+    
+    
+    
+    
+
     func setupCalendarView(){
         calenaerView.minimumLineSpacing = 0
         calenaerView.minimumInteritemSpacing = 0
@@ -104,9 +110,9 @@ class CalendarViewController: UIViewController {
             addVC?.date = self.selected
         
         }
-        else if segue.destination is SplitDetailViewController{
+        else if segue.destination is CalenderDetailTableViewController{
         
-        let detail = segue.destination as? SplitDetailViewController
+        let detail = segue.destination as? CalenderDetailTableViewController
             
             detail?.date = self.selected
         
@@ -135,11 +141,7 @@ class CalendarViewController: UIViewController {
     }
     
     
-    @IBAction func showDetail(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "showDetail", sender: self)
-    }
-    
+  
     
 }
 
@@ -223,12 +225,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
         self.selected = "\(year)-\(month)-\(day)-\(weekday)"
        
-        let notificationName = Notification.Name(rawValue:notificationKey)
+       
+     
         
-        let dataForPass = ["date": self.selected]
-        
-        NotificationCenter.default.post(name: notificationName, object: nil, userInfo: dataForPass)
-        
+    
 
         
         
@@ -266,22 +266,6 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     
     }
     
-  
-    
-}
-
-
-
-//split view configuration
-extension CalendarViewController : UISplitViewControllerDelegate {
-    
-//show the master view by default
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        
-        return true
-    }
-    
-    //customized alert view function
     func notifyUser( _ message: [String] ) -> Void
     {
         let meg: String = message[0]
@@ -292,7 +276,9 @@ extension CalendarViewController : UISplitViewControllerDelegate {
         
     }
     
-    
 }
+
+
+
 
 
