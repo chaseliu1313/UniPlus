@@ -54,7 +54,30 @@ class CalenderDetailTableViewController: UITableViewController {
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.delete{
+            
 
+            
+            let cal = CalendarViewModel.shared.loadCalendarEvents[indexPath.row]
+            if CalendarViewModel.shared.deleteCalendar(cal: cal){
+            
+                detailTable.reloadData()
+            
+            }
+                
+                
+            }
+            else{
+                print("delete failed")
+            }
+            
+            
+            
+        }
+        
+    
     
 
 }

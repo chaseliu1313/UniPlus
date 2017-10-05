@@ -47,9 +47,10 @@ import SQLite
     let TTID = Expression<Int>("TTID")
     let user_id2 = Expression<Int>("userID2")
     let TTdate = Expression<String>("TTdate")
-    let TTendDate = Expression<String>("TTendDate")
-    let TTpeople = Expression<String>("TTpeople")
-    let TTdescription = Expression<String>("TTdescription")
+    let startTime = Expression<Int>("TTstartTime")
+    let endTime = Expression<Int>("TTendTime")
+    let place = Expression<String>("TTplace")
+    let TTDescription = Expression<String>("TTDescription")
     
     //notesTable
     let noteTable = Table("notes")
@@ -116,9 +117,10 @@ import SQLite
             table.column(self.TTID, primaryKey: .autoincrement)
             table.column(self.user_id2)
             table.column(self.TTdate)
-            table.column(self.TTendDate)
-            table.column(self.TTpeople)
-            table.column(self.TTdescription)
+            table.column(self.startTime)
+            table.column(self.endTime)
+            table.column(self.place)
+            table.column(self.TTDescription)
             table.foreignKey(self.user_id2, references: usersTable, id, delete: nil)
             
             
@@ -357,10 +359,74 @@ import SQLite
     
     }
 
- 
+ //Timetable table function
+    
+    func addCourse(course: TimetableEvent, id: Int) -> Bool {
+    
+        let userID = id
+        let date = course.date
+        let startTime = course.startTime
+        let endTime = course.endTime
+        let place = course.place
+        let description = course.description
+        
+        let insert = self.timeTTable.insert(self.user_id2 <- userID, self.TTdate <- date, self.startTime <- startTime, self.endTime <- endTime, self.place <- place, self.TTDescription <- description)
+        
+        do{
+        
+            try self.database.run(insert)
+            print("insered new course \(description)")
+        return true
+        }
+        
+        catch{
+        print(error)
+            return false
+        }
+    
+    }
    
     
+    func loadCourse(id: Int) -> [TimetableEvent] {
     
+        var courseList : [TimetableEvent] = []
+        let filtered = self.timeTTable.filter(user_id2 == id)
+        
+        do
+        {
+            for course in try self.database.prepare(filtered){
+            
+            let newCourse = TimetableEvent.init(id: course[TTID], date: course[TTdate], place: course[place], startTime: course[startTime], endTime: course[endTime], description: course[TTDescription])
+                courseList.append(newCourse)
+            }
+        }
+        
+        catch
+        {
+            print(error)
+            
+        }
+        return courseList
+    
+    }
+    
+    func deleteCourse(courseID : Int)-> Bool {
+    
+        let delete = timeTTable.filter(TTID == courseID)
+        
+        do {
+            
+            try self.database.run(delete.delete())
+            return true
+        }
+            
+        catch{
+            
+            print(error)
+            return false
+        }
+    
+    }
     
     
     //note table functions
@@ -462,9 +528,7 @@ import SQLite
         
         
         do{
-            try  self.database.run(self.calendarTable.drop())
-          
-            try  self.database.run(self.noteTable.drop())
+           
             try  self.database.run(self.timeTTable.drop())
             
         

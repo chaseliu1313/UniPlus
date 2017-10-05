@@ -15,13 +15,16 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var curriculaTable: CurriculaTable!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let handler = { (curriculum: CurriculaTableItem) in
-            print(curriculum.name, curriculum.identifier)
+            self.performSegue(withIdentifier: "addTT", sender: self)
         }
-        let infoSecA = CurriculaTableItem(name: "iPhone Enginerring", place: "Building 80", weekday: .monday, startPeriod: 1, endPeriod: 2, textColor: UIColor.white, bgColor: UIColor(red: 1.0, green: 0.73, blue: 0.0, alpha: 1.0), identifier: "(2015-2016-2)-21190850", tapHandler: handler)
-        let infoSecB = CurriculaTableItem(name: "Graduate Project", place: "XVLab", weekday: .wednesday, startPeriod: 9, endPeriod: 10, textColor: UIColor.white, bgColor: UIColor(red: 1.0, green: 0.73, blue: 0.0, alpha: 1.0), identifier: "(2015-2016-2)-21190850", tapHandler: handler)
+        let infoSecA = CurriculaTableItem(name: "iPhone Enginerring", place: "Building 80", weekday: .monday, startPeriod: 12, endPeriod: 14, textColor: UIColor.white, bgColor: UIColor.gray, identifier: "(2015-2016-2)-21190850", tapHandler: handler)
+        let infoSecB = CurriculaTableItem(name: "Graduate Project", place: "XVLab", weekday: .wednesday, startPeriod: 16, endPeriod:20 , textColor: UIColor.white, bgColor: UIColor(red: 1.0, green: 0.73, blue: 0.0, alpha: 1.0), identifier: "(2015-2016-2)-21190850", tapHandler: handler)
         
         curriculaTable.curricula = [infoSecA, infoSecB]
         
@@ -30,7 +33,8 @@ class SecondViewController: UIViewController {
         curriculaTable.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.9)
         curriculaTable.cornerRadius = 5
         curriculaTable.textEdgeInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
-        curriculaTable.maximumNameLength = 12
+        curriculaTable.maximumNameLength = 24
+        curriculaTable.numberOfPeriods = 22
         
        
         
@@ -75,5 +79,10 @@ class SecondViewController: UIViewController {
         
     }
 
+
+    
+ 
 }
+
+
 

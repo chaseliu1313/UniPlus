@@ -90,13 +90,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uni+/DatabaseManager.swift"
-            timestampString = "528618571.321931"
+            timestampString = "528899643.435665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "362"
-            endingLineNumber = "362"
-            landmarkName = "DbManager"
-            landmarkType = "3">
+            startingLineNumber = "390"
+            endingLineNumber = "390"
+            landmarkName = "loadCourse(id:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uni+/DatabaseManager.swift"
-            timestampString = "528551779.704638"
+            timestampString = "528899643.435665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "217"
-            endingLineNumber = "217"
+            startingLineNumber = "219"
+            endingLineNumber = "219"
             landmarkName = "matchUser(email:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uni+/DatabaseManager.swift"
-            timestampString = "528618571.321931"
+            timestampString = "528899643.435665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "298"
-            endingLineNumber = "298"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "loadCalEvents(id:InputDate:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Uni+/DatabaseManager.swift"
-            timestampString = "528615992.62458"
+            timestampString = "528899643.435665"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "250"
-            endingLineNumber = "250"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
             landmarkName = "insertInfoCal(userID:date:endDate:person:description:)"
             landmarkType = "7">
          </BreakpointContent>
