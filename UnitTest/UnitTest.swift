@@ -1,15 +1,15 @@
 //
-//  Uni_Tests.swift
-//  Uni+Tests
+//  UnitTest.swift
+//  UnitTest
 //
-//  Created by Chase Liu on 5/8/17.
-//  Copyright © 2017 Chase Liu. All rights reserved.
+//  Created by Geng Xu on 2017/10/6.
+//  Copyright © 2017年 Chase Liu. All rights reserved.
 //
 
 import XCTest
-@testable import Uni_
+@testable import
 
-class Uni_Tests: XCTestCase {
+class UnitTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -22,8 +22,26 @@ class Uni_Tests: XCTestCase {
     }
     
     func testExample() {
+        
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+    }
+   
+    
+    func testLogin(){
+        
+    }
+    
+    func testCalender(){
+        
+    }
+    
+    func testaddNote(){
+        let addnote = DetialViewCOntroller.textView(["This is a unit test"])
+        
+        XCTAssertEqual(addnote, This is a unit test, "This say test passed")
+        
+        
     }
     
     func testPerformanceExample() {
