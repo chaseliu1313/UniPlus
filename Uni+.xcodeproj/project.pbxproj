@@ -38,6 +38,8 @@
 		5291FE401F51609E00CED242 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3F1F51609E00CED242 /* WeatherCell.swift */; };
 		5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE411F51758100CED242 /* NoteControllerViewController.swift */; };
 		52B0C3691F6F813000DC8672 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52B0C3681F6F813000DC8672 /* SWRevealViewController.m */; };
+		52DEDB9B1F8793D6002AC7B3 /* AddCourseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */; };
+		52DEDBA51F87A9A6002AC7B3 /* CouseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */; };
 		52F2DD7C1F7F661900B7F7AF /* LoginRegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F2DD7B1F7F661900B7F7AF /* LoginRegViewModel.swift */; };
 		72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB20011F414E5000A09929 /* LoginViewController.swift */; };
 		72EB20041F41514E00A09929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB20031F41514E00A09929 /* RegisterViewController.swift */; };
@@ -50,7 +52,6 @@
 		E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */; };
 		E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701061F7B7F1600B805A2 /* SettingViewController.swift */; };
 		E8A363EA1F869B700055F89D /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A363E91F869B700055F89D /* UnitTest.swift */; };
-		E8A363F21F86A4A90055F89D /* AddCourse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A363F11F86A4A90055F89D /* AddCourse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,8 @@
 		5291FE411F51758100CED242 /* NoteControllerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteControllerViewController.swift; sourceTree = "<group>"; };
 		52B0C3671F6F813000DC8672 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		52B0C3681F6F813000DC8672 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourseTableViewController.swift; sourceTree = "<group>"; };
+		52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CouseDetailTableViewController.swift; sourceTree = "<group>"; };
 		52F2DD7B1F7F661900B7F7AF /* LoginRegViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRegViewModel.swift; sourceTree = "<group>"; };
 		689F2D073E8B6B2B6E53735E /* Pods-Uni+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+UITests/Pods-Uni+UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E81B23F0B3189EEFEA9B9D4 /* Pods_Uni_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,7 +139,6 @@
 		E8A363E71F869B700055F89D /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A363E91F869B700055F89D /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
 		E8A363EB1F869B700055F89D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8A363F11F86A4A90055F89D /* AddCourse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddCourse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +231,6 @@
 				5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */,
 				E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */,
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
-				E8A363F11F86A4A90055F89D /* AddCourse.swift */,
 				72EB20031F41514E00A09929 /* RegisterViewController.swift */,
 				5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */,
 				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
@@ -245,6 +246,8 @@
 				521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */,
 				521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */,
 				5216C5231F84A9A400102F23 /* CalenderDetailTableViewController.swift */,
+				52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */,
+				52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */,
 				525CB0841F6E356F0036F2A1 /* SWViewController */,
 			);
 			name = Controller;
@@ -664,6 +667,7 @@
 				521E90A81F52928C00BAE5A6 /* CalendarViewController.swift in Sources */,
 				E7EA834E1F3558BA0030E7AA /* SecondViewController.swift in Sources */,
 				5216C5241F84A9A400102F23 /* CalenderDetailTableViewController.swift in Sources */,
+				52DEDBA51F87A9A6002AC7B3 /* CouseDetailTableViewController.swift in Sources */,
 				5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */,
 				5214A0491F7743EC0090BD4F /* TimeTablePopoverViewController.swift in Sources */,
 				521E90AC1F5298E600BAE5A6 /* CustomCell.swift in Sources */,
@@ -680,13 +684,13 @@
 				5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* UserModel.swift in Sources */,
 				5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */,
-				E8A363F21F86A4A90055F89D /* AddCourse.swift in Sources */,
 				E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */,
 				521BE7931F81B609008636DC /* addClendarEventViewController.swift in Sources */,
 				72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */,
 				5214A04B1F77836E0090BD4F /* Event.swift in Sources */,
 				52F2DD7C1F7F661900B7F7AF /* LoginRegViewModel.swift in Sources */,
 				52214ABC1F7DDCBE00FC2F86 /* DatabaseManager.swift in Sources */,
+				52DEDB9B1F8793D6002AC7B3 /* AddCourseTableViewController.swift in Sources */,
 				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
@@ -1022,6 +1026,7 @@
 				E8A363F01F869B700055F89D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

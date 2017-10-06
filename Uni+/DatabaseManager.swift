@@ -386,6 +386,32 @@ import SQLite
     
     }
    
+    func getCourse(id: Int) -> TimetableEvent? {
+    
+        var Newcourse: TimetableEvent?
+    
+        let filtered = self.timeTTable.filter(TTID == id)
+        
+        do{
+            
+            for course in try self.database.prepare(filtered){
+                
+                 Newcourse = TimetableEvent.init(id: course[TTID], date: course[TTdate], place: course[place], startTime: course[startTime], endTime: course[endTime], description: course[TTDescription])
+                
+            }
+        
+        }
+        catch {
+        
+        print(error)
+        }
+    
+    
+    return Newcourse
+    
+    
+    }
+    
     
     func loadCourse(id: Int) -> [TimetableEvent] {
     

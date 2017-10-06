@@ -4,7 +4,7 @@
 //
 //  Created by Chase on 23/9/17.
 //  Copyright © 2017 Chase Liu. All rights reserved.
-//let infoSecA = CurriculaTableItem(name: "iPhone Enginerring", place: "Building 80", weekday: .monday, startPeriod: 12, endPeriod: 14, textColor: UIColor.white, bgColor: UIColor.gray, identifier: "(2015-2016-2)-21190850", tapHandler: handler)
+
 
 
 import Foundation
@@ -19,14 +19,20 @@ class TimeTableViewModel{
         
     }
    
+    let weekdays = ["Monday", "Tuesday" ,"Wednesday", "Thursday", "Friday","Saturday","Sunday"]
+    
+    let startTime = ["6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22"]
+    
+    let endTime = ["6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22"]
+    
     
     var handler = { (curriculum: CurriculaTableItem) in
      
-        
+     
     }
 
     var loadCourses : [TimetableEvent] = []
-    var loadCurricular :[CurriculaTableItem] = []
+    
 
 
     func loadAllCourses()
@@ -35,20 +41,83 @@ class TimeTableViewModel{
     let userID = User.shared.id
     self.loadCourses = DbManager.shared.loadCourse(id: userID)
     
-        for course in self.loadCourses {
-        
-        
-        let corricular = CurriculaTableItem(name: course.description, place: course.place, weekday: getWeekday(day: course.date), startPeriod:course.startTime, endPeriod: course.endTime , textColor: UIColor.white, bgColor: UIColor.gray, identifier: String(course.id), tapHandler: handler)
+       
+    
+    }
+    
+    
+    func addCouse(couse: TimetableEvent) -> Bool{
+    
+    let userID = User.shared.id
+        if DbManager.shared.addCourse(course: couse, id: userID) {
             
-            loadCurricular.append(corricular)
+            self.loadAllCourses()
+            return true
+        
         
         }
+        else {
+        
+            
+            return false
+        
+        }
+    
+    }
+    
+    func deleteCouse(couseID: Int) -> Bool {
+    
+    
+        if DbManager.shared.deleteCourse(courseID: couseID) {
+        
+        self.loadAllCourses()
+            return true
+        }
+        else {
+        return false
+        }
+    
+    
+    }
+    
+    func getCourse(id: Int) -> TimetableEvent? {
+    
+        var findCourse: TimetableEvent?
+    
+    
+    
+       if let course =  DbManager.shared.getCourse(id: id)
+       {
+        
+        findCourse = course
+        
+        }
+       else {
+        
+        print("retrive course failed")
+        }
+    
+    return findCourse
+    
+    }
+    
+    
+    func formCourse(date:String, place: String, startTime: Int, endTime: Int, description:String) -> TimetableEvent{
+        
+       
+        let newCourse = TimetableEvent.init(date: date, place: place, startTime: startTime, endTime: endTime, description: description)
+        
+        return newCourse
+    
     
     
     
     }
 
    
+   
+    
+    //return the object type that is required in the CurriculaTable
     func getWeekday(day: String) -> CurriculaTableWeekday {
         
         
@@ -63,6 +132,28 @@ class TimeTableViewModel{
     
     
     }
+    
+    
+    
+    
+    
+    //return random couse background color
+    func getColor()-> UIColor
+        
+    {
+        let colors :[Int: UIColor]  = [1: UIColor.black, 2: UIColor.blue, 3: UIColor.brown, 4: UIColor.cyan, 5:UIColor.darkGray, 6:UIColor.green, 7:UIColor.red, 8:UIColor.yellow, 9: UIColor.purple, 10: UIColor.orange]
+        
+        let random: Int = Int(arc4random_uniform(10)+1)
+        
+        let color: UIColor = colors[random]!
+        
+        return color
+        
+        
+    }
+
 
 
 }
+
+

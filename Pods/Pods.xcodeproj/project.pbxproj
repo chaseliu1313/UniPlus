@@ -133,7 +133,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		034E480C84AFAD1CEF3FB878470FE8E4 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SQLite.framework; path = SQLite.swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		034E480C84AFAD1CEF3FB878470FE8E4 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03AD376C6E8DFC82A79B72C8ACD30C44 /* UserInteractionFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UserInteractionFunctions.swift; path = Sources/UserInteractionFunctions.swift; sourceTree = "<group>"; };
 		093BDDF23F5033535752547B806B49C7 /* CalendarStructs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CalendarStructs.swift; path = Sources/CalendarStructs.swift; sourceTree = "<group>"; };
 		0D0C05FE21ECFD41C86AB6726E583BB1 /* Pods-Uni+-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Uni+-dummy.m"; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 		1D5203D4713D6EBB3919C35B83910707 /* CoreFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreFunctions.swift; path = Sources/SQLite/Typed/CoreFunctions.swift; sourceTree = "<group>"; };
 		1E165EDB519CA86FF252174B7D29683E /* Pods-Uni+UITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Uni+UITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		223EBAD05E9409BED9D0E35798469B2B /* FTS4.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS4.swift; path = Sources/SQLite/Extensions/FTS4.swift; sourceTree = "<group>"; };
-		27CB8794872D64B23164A96EC07CCC9F /* Pods_Uni_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Uni_Tests.framework; path = "Pods-Uni+Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		27CB8794872D64B23164A96EC07CCC9F /* Pods_Uni_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B59CE0CC36937B6170127F1A6869A3F /* Pods-Uni+.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Uni+.debug.xcconfig"; sourceTree = "<group>"; };
 		3015C13D99984EE03174DB39F43BD447 /* String+Truncate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Truncate.swift"; path = "CurriculaTable/String+Truncate.swift"; sourceTree = "<group>"; };
 		34A180D714708C7ACE3F5807B3095B94 /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 		433622391BAF8106CD3CB509064C844B /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		462C91AE32453369CAA79ABD874031AD /* JTAppleCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCell.swift; path = Sources/JTAppleCell.swift; sourceTree = "<group>"; };
 		48E1A5FF9D1C7F3F8B178673C4AFB205 /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		4CFA16C9B802A98AAA5029F0273348BC /* Pods-Uni+Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Uni+Tests.modulemap"; sourceTree = "<group>"; };
+		4CFA16C9B802A98AAA5029F0273348BC /* Pods-Uni+Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Uni+Tests.modulemap"; sourceTree = "<group>"; };
 		502FB7960171B6317B8A3E6F240CEFC3 /* Pods-Uni+Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Uni+Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		5977CAAFA81E8ADE159E93EFA215D734 /* JTAppleCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JTAppleCalendar-prefix.pch"; sourceTree = "<group>"; };
 		5A0F87D601C1A40462C623E7E205037B /* Pods-Uni+-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Uni+-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -183,18 +183,18 @@
 		73252729E013DEB4D6A0D35AB4ADE41F /* Pods-Uni+-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Uni+-acknowledgements.plist"; sourceTree = "<group>"; };
 		74A27ADFEEAB3632B94AD9C8230D5F43 /* Pods-Uni+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Uni+UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		756CFB320B76C319DA68CA43E342E6A4 /* CustomFunctions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomFunctions.swift; path = Sources/SQLite/Typed/CustomFunctions.swift; sourceTree = "<group>"; };
-		768B35A6D846E3656455BD33312DB19F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		768B35A6D846E3656455BD33312DB19F /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		79A67BA94778104FDCA66BE1B0DEED6B /* Pods-Uni+UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Uni+UITests.release.xcconfig"; sourceTree = "<group>"; };
-		7A0C335CAC76584FD6FBF32B43DDEA8C /* CurriculaTable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CurriculaTable.modulemap; sourceTree = "<group>"; };
+		7A0C335CAC76584FD6FBF32B43DDEA8C /* CurriculaTable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CurriculaTable.modulemap; sourceTree = "<group>"; };
 		7A577C84CA1B05088EDBCAA8CAC3F01C /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
 		7AB6A84B76CB4EDA47F246B92F4201E3 /* Pods-Uni+UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Uni+UITests-frameworks.sh"; sourceTree = "<group>"; };
 		7AE7EBF3242140A595A73F3DF69A8A3D /* SQLite.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLite.swift-dummy.m"; sourceTree = "<group>"; };
 		7DA90CB939460807BDF3205A163F324A /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		7DD7BD38DACA49C6A262905903DB7DCE /* CurriculaTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CurriculaTable.framework; path = CurriculaTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DD7BD38DACA49C6A262905903DB7DCE /* CurriculaTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CurriculaTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F0FE020D0DD503B7EEACD60E1E47FDA /* JTAppleCalendarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayout.swift; path = Sources/JTAppleCalendarLayout.swift; sourceTree = "<group>"; };
 		82068BF2F33A2DFFB01119183AEDB711 /* Pods-Uni+-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Uni+-resources.sh"; sourceTree = "<group>"; };
 		821C6BFBE55A6B67FA515FED6EA92EFE /* fts3_tokenizer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = fts3_tokenizer.h; path = Sources/SQLiteObjc/fts3_tokenizer.h; sourceTree = "<group>"; };
-		852EAE5C2DA54CF2441AE82F1571D2A6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		852EAE5C2DA54CF2441AE82F1571D2A6 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		879A3A1D5BE32CA35BCA1AB34BCC8AAB /* Pods-Uni+Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Uni+Tests-resources.sh"; sourceTree = "<group>"; };
 		87B986D1A2DFA3544735FF249C2D44AA /* JTAppleCalendarLayoutProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarLayoutProtocol.swift; path = Sources/JTAppleCalendarLayoutProtocol.swift; sourceTree = "<group>"; };
 		881EFA8A9CBB77561BF92F16EC242CB0 /* CurriculaTableWeekday.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurriculaTableWeekday.swift; path = CurriculaTable/CurriculaTableWeekday.swift; sourceTree = "<group>"; };
@@ -205,20 +205,20 @@
 		8F15813B46D12153C995F2232DB0B8D1 /* CurriculaTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurriculaTable.swift; path = CurriculaTable/CurriculaTable.swift; sourceTree = "<group>"; };
 		8F9CF4147DACC93515F69C299642F2EF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90D3C55ABFCAD7400CA1398DA01EB79C /* UIScrollViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIScrollViewDelegates.swift; path = Sources/UIScrollViewDelegates.swift; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94FBE691CBDCF2A8F91A32D778EC95EF /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		9BA4A3120DB79B86D04A8F7EAC23F967 /* Pods-Uni+-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Uni+-frameworks.sh"; sourceTree = "<group>"; };
 		9C0AF99939A907614A25DBC4AE102FB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D14E9BA3CF0A7ECD64BCF807014E94E /* SQLite-Bridging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SQLite-Bridging.h"; path = "Sources/SQLiteObjc/include/SQLite-Bridging.h"; sourceTree = "<group>"; };
 		A114ED604F1326B94DC62B4D55861D2F /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
 		A1BB29DE10CFD7F3B1BB3A5DBE19C270 /* Schema.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Schema.swift; path = Sources/SQLite/Typed/Schema.swift; sourceTree = "<group>"; };
-		A468B7EFB37EF7EE063F991DF5C31C6C /* Pods_Uni_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Uni_.framework; path = "Pods-Uni+.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A468B7EFB37EF7EE063F991DF5C31C6C /* Pods_Uni_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A499517817634081AAB00E2CB0EA7CB4 /* CurriculaTable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CurriculaTable-prefix.pch"; sourceTree = "<group>"; };
 		A6C2948E918C068DFA3298AB08180A37 /* SQLite.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLite.swift-umbrella.h"; sourceTree = "<group>"; };
 		A72FFFE705A3C5DB5E6841F9041763C8 /* CurriculaTableController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurriculaTableController.swift; path = CurriculaTable/CurriculaTableController.swift; sourceTree = "<group>"; };
 		AB969B6DEEAA27E81B7AF175F7F271F3 /* SQLite.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SQLite.h; path = Sources/SQLite/SQLite.h; sourceTree = "<group>"; };
 		AF5DD36E66724D4E810D8C87CFF2499A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1B8C0A34A249A3CFD10EBF20A9CD21D /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		B1B8C0A34A249A3CFD10EBF20A9CD21D /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		B3D9040E44C88B3A62AB6116B270C7E6 /* Setter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Setter.swift; path = Sources/SQLite/Typed/Setter.swift; sourceTree = "<group>"; };
 		BB3E02DD1B2E1C08B7F2422BF3A42D9E /* CurriculaTable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CurriculaTable-dummy.m"; sourceTree = "<group>"; };
 		BD3B2813C0F7A84AB1D400F495AEF616 /* SQLite-Bridging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SQLite-Bridging.m"; path = "Sources/SQLiteObjc/SQLite-Bridging.m"; sourceTree = "<group>"; };
@@ -226,12 +226,12 @@
 		C4F47AAF4D6324B9D933ADBB9F706DE8 /* CurriculaTable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CurriculaTable-umbrella.h"; sourceTree = "<group>"; };
 		C66DAABB0ED7C392CBC1B92B8EC2CFB0 /* FTS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FTS5.swift; path = Sources/SQLite/Extensions/FTS5.swift; sourceTree = "<group>"; };
 		C77F4C432E260226A7E9EB4CD4E112DF /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		C851A6FE73626E599B7D871E26EE39FF /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
+		C851A6FE73626E599B7D871E26EE39FF /* SQLite.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLite.swift.modulemap; sourceTree = "<group>"; };
 		C86099146E7DC40BD359D05B17F4A285 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
 		CA4C99E2300F9C97DE8033ABE5597C74 /* JTAppleCalendarDelegateProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarDelegateProtocol.swift; path = Sources/JTAppleCalendarDelegateProtocol.swift; sourceTree = "<group>"; };
-		CDADBAB908E7FCF0065DCF3E626ABCD4 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JTAppleCalendar.framework; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDADBAB908E7FCF0065DCF3E626ABCD4 /* JTAppleCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JTAppleCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0A52075B6DCD39AFD4E5033F96ADEF6 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		D0EDFF038CF909E8A4F8AA39A0E62055 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		D0EDFF038CF909E8A4F8AA39A0E62055 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		D1AB50207127D0BE167A42F7C254FD08 /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
 		D27363D09D9F6C8537B560FB406B464D /* CurriculaTableCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurriculaTableCell.swift; path = CurriculaTable/CurriculaTableCell.swift; sourceTree = "<group>"; };
 		D285A0AE83B00541DB6250EF08A2B657 /* Pods-Uni+Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Uni+Tests-dummy.m"; sourceTree = "<group>"; };
@@ -247,21 +247,21 @@
 		E5D48AA7D7C5037377C8FDF1E18D78FB /* JTAppleCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JTAppleCalendar-dummy.m"; sourceTree = "<group>"; };
 		E7D91A7BEC8C31CA8054C43F072DF55B /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		E8520537C32357D4AF85366E19EC530C /* Pods-Uni+UITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Uni+UITests-dummy.m"; sourceTree = "<group>"; };
-		E887BA4713A1EF6682D84AD2543C5E5A /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
+		E887BA4713A1EF6682D84AD2543C5E5A /* JTAppleCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = JTAppleCalendar.modulemap; sourceTree = "<group>"; };
 		E8DAA626255A273A66C305068D8BFF3C /* GlobalFunctionsAndExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GlobalFunctionsAndExtensions.swift; path = Sources/GlobalFunctionsAndExtensions.swift; sourceTree = "<group>"; };
-		EA21235AD85A58C198800A2FD72D2E9B /* Pods-Uni+.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Uni+.modulemap"; sourceTree = "<group>"; };
+		EA21235AD85A58C198800A2FD72D2E9B /* Pods-Uni+.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Uni+.modulemap"; sourceTree = "<group>"; };
 		EC51A35D4EFEC60599E73159CE07406F /* UICollectionViewDelegates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UICollectionViewDelegates.swift; path = Sources/UICollectionViewDelegates.swift; sourceTree = "<group>"; };
 		EC6B684E330EACB2C7FFA010D89047C8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFAD9B3B96D16CD2740B9142104F2C2E /* JTAppleCollectionReusableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCollectionReusableView.swift; path = Sources/JTAppleCollectionReusableView.swift; sourceTree = "<group>"; };
 		F00520ED15AA94E49766CEB1CDEEA6B6 /* JTAppleCalendarView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarView.swift; path = Sources/JTAppleCalendarView.swift; sourceTree = "<group>"; };
-		F0234A0E28AB952747B3A12384558DEF /* Pods_Uni_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Uni_UITests.framework; path = "Pods-Uni+UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0234A0E28AB952747B3A12384558DEF /* Pods_Uni_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E7CCE18731C2B9FC56DE9CB63EB454 /* Pods-Uni+Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Uni+Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F1AAA80290A3ED1C61C76F616C2B00A5 /* Blob.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blob.swift; path = Sources/SQLite/Core/Blob.swift; sourceTree = "<group>"; };
 		F51F64CECA12D556701B8F65DC00E650 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F66C3B620CAFA4877C90818771BE0023 /* Pods-Uni+UITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Uni+UITests-umbrella.h"; sourceTree = "<group>"; };
 		F77BC1A485CABA15CBCEF6709055DA67 /* Pods-Uni+UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Uni+UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		FA1DB81ADBCA76E1B8A110956F8DE936 /* JTAppleCalendarVariables.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JTAppleCalendarVariables.swift; path = Sources/JTAppleCalendarVariables.swift; sourceTree = "<group>"; };
-		FBD13F63D2D4716372FD1FD8AC016D65 /* Pods-Uni+UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Uni+UITests.modulemap"; sourceTree = "<group>"; };
+		FBD13F63D2D4716372FD1FD8AC016D65 /* Pods-Uni+UITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Uni+UITests.modulemap"; sourceTree = "<group>"; };
 		FC8B2C2D42E52778213C4DC6254B60FB /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		FED8DB378B902240CBB359A7F33127AC /* CurriculaTable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CurriculaTable.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -425,7 +425,6 @@
 				70FB56E3B8571647E668AEA0F70B3DDE /* SwiftyJSON.swift */,
 				2FE1F73D6FA84832D2B995B45BA5993C /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -535,7 +534,6 @@
 				03AD376C6E8DFC82A79B72C8ACD30C44 /* UserInteractionFunctions.swift */,
 				149860BFA87E71714289C15EEFDE2093 /* Support Files */,
 			);
-			name = JTAppleCalendar;
 			path = JTAppleCalendar;
 			sourceTree = "<group>";
 		};
@@ -545,7 +543,6 @@
 				56C22FF7DFFC04564D05A5F381C1BBA9 /* standard */,
 				0D73279F74827DCC3E724656A55670D3 /* Support Files */,
 			);
-			name = SQLite.swift;
 			path = SQLite.swift;
 			sourceTree = "<group>";
 		};
@@ -572,7 +569,6 @@
 				3015C13D99984EE03174DB39F43BD447 /* String+Truncate.swift */,
 				0D8D1980A518FD1E759C477C60243BBC /* Support Files */,
 			);
-			name = CurriculaTable;
 			path = CurriculaTable;
 			sourceTree = "<group>";
 		};
@@ -632,7 +628,6 @@
 				94FBE691CBDCF2A8F91A32D778EC95EF /* Validation.swift */,
 				160D1523D19417F0FAA3B2983BCD8715 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};

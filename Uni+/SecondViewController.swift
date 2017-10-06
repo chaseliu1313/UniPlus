@@ -15,19 +15,37 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var curriculaTable: CurriculaTable!
     
+    var loadCurricular :[CurriculaTableItem] = []
+    var courseID: Int = 0
+    
+    var handler  = {(curriculum: CurriculaTableItem) in
+        
+        
+    }
     
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         
-        let handler = { (curriculum: CurriculaTableItem) in
-            self.performSegue(withIdentifier: "addTT", sender: self)
+        //tap handler for course
+        self.handler = {(curriculum: CurriculaTableItem) in
+            
+            
+            self.courseID = Int(curriculum.identifier)!
+            print(self.courseID)
+            self.performSegue(withIdentifier: "courseDetail", sender: self)
+            
         }
-        let infoSecA = CurriculaTableItem(name: "iPhone Enginerring", place: "Building 80", weekday: .monday, startPeriod: 12, endPeriod: 14, textColor: UIColor.white, bgColor: UIColor.gray, identifier: "(2015-2016-2)-21190850", tapHandler: handler)
-        let infoSecB = CurriculaTableItem(name: "Graduate Project", place: "XVLab", weekday: .wednesday, startPeriod: 16, endPeriod:20 , textColor: UIColor.white, bgColor: UIColor(red: 1.0, green: 0.73, blue: 0.0, alpha: 1.0), identifier: "(2015-2016-2)-21190850", tapHandler: handler)
         
-        curriculaTable.curricula = [infoSecA, infoSecB]
+        //loadtimeTable
+        self.loadCorriluar()
+       curriculaTable.curricula = self.loadCurricular
         
+        curriculaTable.layoutSubviews()
+
+        //customize timetable
         curriculaTable.bgColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.0)
         curriculaTable.borderWidth = 0.5
         curriculaTable.borderColor = UIColor(red: 0.9, green: 0.9, blue: 0.9, alpha: 0.9)
@@ -37,10 +55,9 @@ class SecondViewController: UIViewController {
         curriculaTable.numberOfPeriods = 22
         
        
-        
+        //customize navagation bar
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.white
         
         
@@ -49,13 +66,46 @@ class SecondViewController: UIViewController {
         sideMenu()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+    
+        self.loadCorriluar()
+        curriculaTable.layoutSubviews()
     }
 
-   
+    func loadCorriluar(){
+    
+    
+        TimeTableViewModel.shared.loadAllCourses()
+        
+        for course in TimeTableViewModel.shared.loadCourses {
+        
+            let corricular = CurriculaTableItem(name: course.description, place: course.place, weekday: TimeTableViewModel.shared.getWeekday(day: course.date), startPeriod:course.startTime, endPeriod: course.endTime , textColor: UIColor.white, bgColor: TimeTableViewModel.shared.getColor(), identifier: String(course.id), tapHandler: handler)
+            
+            loadCurricular.append(corricular)
+        
+        
+        }
+        
+        
+    
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.destination is CouseDetailTableViewController {
+        
+            let vc = segue.destination as? CouseDetailTableViewController
+            
+            vc?.courseID = self.courseID
+        
+        }
+        
+        
+    }
+    
+    
     
     //open side menu
     func sideMenu()
