@@ -19,7 +19,6 @@ class WeatherCell: UITableViewCell {
     
     
     
-    
     func setData(weather: WeatherModelViewItem?){
     
         guard let weatherData = weather

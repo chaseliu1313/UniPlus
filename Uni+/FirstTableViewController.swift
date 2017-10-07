@@ -15,7 +15,7 @@ class FirstTableViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
-    let weatherVM = WeatherModelViewItem.init()
+   
     
 
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class FirstTableViewController: UITableViewController {
        { let cell = tableView.dequeueReusableCell(withIdentifier: "firstcell",for: indexPath) as! WeatherCell
         //myDayTable.reloadData()
         
-        cell.setData(weather: self.weatherVM)
+        cell.setData(weather: WeatherModelViewItem.shared)
         
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
@@ -60,13 +60,46 @@ class FirstTableViewController: UITableViewController {
         }
        
        
-       else {
+       else if indexPath.row == 1 {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
+        
+        cell.name1.text = TimetableFirstPageViewModel.shared.name1
+        cell.name2.text = TimetableFirstPageViewModel.shared.name2
+        cell.Time1.text = TimetableFirstPageViewModel.shared.time1
+        cell.time2.text = TimetableFirstPageViewModel.shared.time2
+        
+        cell.backgroundColor = UIColor.clear
+        return cell
+        
+        }
+        
+       else if indexPath.row == 2 {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
+        cell.name1.text = CalendarFirstPageViewModel.shared.name1
+        cell.Time1.text = CalendarFirstPageViewModel.shared.time1
+        cell.name2.text = CalendarFirstPageViewModel.shared.name2
+        cell.time2.text = CalendarFirstPageViewModel.shared.time2
+        
         cell.backgroundColor = UIColor.clear
         return cell
         }
+       else {
         
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell",for: indexPath) as! EventTableViewCell
+        cell.backgroundColor = UIColor.clear
+        
+        
+        cell.name1.text = NoteFirstPageViewModel.shared.name1
+        cell.Time1.text = NoteFirstPageViewModel.shared.time1
+        cell.name2.text = NoteFirstPageViewModel.shared.name2
+        cell.time2.text = NoteFirstPageViewModel.shared.time2
+        
+        return cell
+        
+        }
        
         
         

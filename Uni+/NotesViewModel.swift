@@ -12,7 +12,7 @@ class NoteViewModel{
     
     
     var loadedNote :[Note] = []
-    var noteCache: [String] = []
+//    var noteCache: [String] = []
   
     let userID = User.shared.id
     
