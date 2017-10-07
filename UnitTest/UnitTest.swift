@@ -7,48 +7,57 @@
 //
 
 import XCTest
-@testable import
+@testable import Uni_
 
 class UnitTest: XCTestCase {
     
+    var nv : NoteViewModel!
+    
+    
     override func setUp() {
+    
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        nv = NoteViewModel()
     }
+    
+
+    
+    
+    func test_FormNote(){
+    
+    let description = "This is a new test"
+        
+       let note =  nv.formNote(content: description)
+    
+        XCTAssertEqual(note.description, "This is a new test")
+    
+    
+    }
+    
+    func test_InsertNote(){
+    
+        let note = Note.init(date: "2017-10-07-Saturday", description: "testNote")
+        //let userID = 2
+        
+    
+        
+        
+       
+        
+       let result =  nv.addNote(note: note)
+        
+        
+     
+        XCTAssertEqual(result, true)
+        
+        
+    
+    }
+    
+
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-    
-    func testExample() {
-        
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-   
-    
-    func testLogin(){
-        
-    }
-    
-    func testCalender(){
-        
-    }
-    
-    func testaddNote(){
-        let addnote = DetialViewCOntroller.textView(["This is a unit test"])
-        
-        XCTAssertEqual(addnote, This is a unit test, "This say test passed")
-        
-        
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
     
 }
