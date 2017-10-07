@@ -14,6 +14,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var calenaerView: JTAppleCalendarView!
+    @IBOutlet weak var selectionView: UIView!
     
 
  
@@ -37,7 +38,8 @@ class CalendarViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-    
+        self.calenaerView.scrollToDate(Date.init())
+        
         
        
         
@@ -55,7 +57,7 @@ class CalendarViewController: UIViewController {
         //setupcalendarViewUI
         setupCalendarView()
         
-        calenaerView.scrollToDate(Date.init())
+       
         
     }
     
@@ -143,6 +145,9 @@ class CalendarViewController: UIViewController {
     
   
     
+    
+  
+    
 }
 
 
@@ -160,11 +165,15 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
-        let startDate = formatter.date(from:"2000 01 01 Sat")!
+        let startDate = formatter.date(from:"2010 01 01 Fri")!
         let endDate = formatter.date(from:"2100 01 01 Fri")!
         
         let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
         self.calenaerView.scrollingMode = ScrollingMode.stopAtEachCalendarFrameWidth
+        self.calenaerView.scrollToDate(Date.init())
+        
+    
+       
         
         return parameter
     }
@@ -199,7 +208,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
             cell.selectedView.isHidden = true
             
         }
-        
+        cell.selectedView.layer.cornerRadius = 25
         cell.dateLabel.textColor = UIColor.gray
         handleCellTextColor(view: cell, cellState: cellState)
         

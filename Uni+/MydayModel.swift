@@ -23,8 +23,9 @@ struct MydayModel {
     var isCel = true
     var temper: Double?
     
+    static var shared = MydayModel()
     
-    init(){
+    private init(){
     
     
     }

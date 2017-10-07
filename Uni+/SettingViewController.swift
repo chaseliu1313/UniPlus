@@ -10,16 +10,16 @@ import UIKit
 
 class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
 
-    @IBOutlet weak var weekOption: UIPickerView!
+    
     
     @IBOutlet weak var temperatureOption: UIPickerView!
     
     @IBOutlet weak var campusOption: UIPickerView!
     
+    var campus: String?
+    var weatherType : String?
     
-    var dateArray = ["Sat", "Sun", "Mon"]
-    var tempArray = ["F","C"]
-    var campusArray = ["City", "Bundoora", "Brunswick"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +28,7 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
        self.view.contentMode = .scaleAspectFill
         
         
-        weekOption.dataSource = self
-        weekOption.delegate = self
+      
         
         temperatureOption.dataSource = self
         temperatureOption.delegate = self
@@ -43,24 +42,60 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func save(_ sender: UIButton) {
+        
+        
+        if let setCam = self.campus, let setWeather = self.weatherType {
+        
+        MydayModel.shared.setCampus(campus: setCam)
+            
+            print(MydayModel.shared.campus)
+            if setWeather == "C" {
+            
+                MydayModel.shared.isCel = true
+            
+            }
+            else {
+            
+            MydayModel.shared.isCel = false
+                print(MydayModel.shared.isCel)
+                
+            }
+            self.notifyUser(["Settings updated, will be applied next time log in"])
+        
+        }
+        
+        else {
+            
+        self.notifyUser(["Please change something :)"])
+        
+        }
+        
         
     }
     
     
+    func notifyUser( _ message: [String] ) -> Void
+    {
+        let meg: String = message[0]
+        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true)
+        
+    }
+  
+    
+    
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
     {
-        if weekOption == pickerView {
-            return dateArray.count
-        } else if temperatureOption == pickerView{
-            return tempArray.count
+         if temperatureOption == pickerView{
+            return WeatherModelViewItem.shared.tempArray.count
         }else {
-            return campusArray.count
+            return WeatherModelViewItem.shared.campusArray.count
         }
     }
     
@@ -71,16 +106,15 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
 
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
     {
-        if weekOption == pickerView {
-            return dateArray[row]
-        } else if temperatureOption == pickerView{
-            return tempArray[row]
+         if temperatureOption == pickerView{
+            return WeatherModelViewItem.shared.tempArray[row]
         }else if campusOption == pickerView{
-            return campusArray[row]
+            return WeatherModelViewItem.shared.campusArray[row]
         }
 
         return ""
     }
+    
     //set the pickerView color
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         var pickerLabel = view as? UILabel;
@@ -91,13 +125,12 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
             pickerLabel!.textAlignment = NSTextAlignment.center
             pickerLabel!.textColor = UIColor.white
         }
-        if weekOption==pickerView{
-            pickerLabel?.text = dateArray[row]
-        }else if temperatureOption==pickerView{
-            pickerLabel?.text = tempArray[row]
+       
+        if temperatureOption==pickerView{
+            pickerLabel?.text = WeatherModelViewItem.shared.tempArray[row]
             
         }else{
-            pickerLabel?.text = campusArray[row]
+            pickerLabel?.text = WeatherModelViewItem.shared.campusArray[row]
         }
         return pickerLabel!
         }
@@ -106,14 +139,16 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
         self.dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        
+        if temperatureOption == pickerView{
+            self.weatherType = WeatherModelViewItem.shared.tempArray[row]
+        }else if campusOption == pickerView{
+            self.campus =  WeatherModelViewItem.shared.campusArray[row]
+        }
+        
     }
-    */
+        
 
 }

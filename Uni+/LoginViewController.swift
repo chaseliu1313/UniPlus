@@ -22,7 +22,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func login(_ sender: Any) {
         
-          self.performSegue(withIdentifier: "autologin", sender: self)
         
         let email = textField2.text
         let password = textField.text
@@ -44,16 +43,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                  StatusManager.setLogin()
                 
-                login.saveLogin(email: email!, password: password!)
                  self.performSegue(withIdentifier: "login", sender: self)
                
                 
 //                 instantiate side menu
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
-                let appDelegate = UIApplication.shared.delegate as! AppDelegate
-                appDelegate.window?.rootViewController = reviewController
-                
+//                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                let reviewController = storyboard.instantiateViewController(withIdentifier: "revealViewController")
+//                let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//                appDelegate.window?.rootViewController = reviewController
+//                
             
             }
             else {
@@ -81,17 +79,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
        
     
-        let autoLogin = UserDefaults.standard.bool(forKey: "isLoggedIn")
-        if autoLogin && login.autoLogin() {
-            
-            
-            
-        
-        self.performSegue(withIdentifier: "autologin", sender: self)
-            print(User.shared.id)
-            print(User.shared.email)
-            
-        }
        
         
         super.viewDidLoad()

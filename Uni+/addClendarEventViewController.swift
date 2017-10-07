@@ -28,10 +28,7 @@ UIViewController {
         
     }
 
-  
-    @IBAction func close(_ sender: Any) {
-       self.performSegue(withIdentifier: "return", sender: self)
-    }
+
     
     @IBAction func save(_ sender: UIButton) {
         
@@ -52,7 +49,7 @@ UIViewController {
         
         if calVM.addCalendar(cal: cal){
             
-            self.performSegue(withIdentifier: "return", sender: self)
+           self.notifyUser(["New Calendar Event Saved"])
         }
             
         else {

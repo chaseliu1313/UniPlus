@@ -27,12 +27,10 @@
 		5267D6701F762FF8002A84C6 /* MyDayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */; };
 		5267D6721F76300C002A84C6 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6711F76300C002A84C6 /* CalendarViewModel.swift */; };
 		5267D6741F76301C002A84C6 /* TimeTableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */; };
-		5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6751F763027002A84C6 /* SettingViewModel.swift */; };
 		5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6771F76304F002A84C6 /* ProfileViewModel.swift */; };
 		5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6791F76305D002A84C6 /* NotesViewModel.swift */; };
 		526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */; };
 		5284B12A1F7E8E4B008E6E0D /* RegisterPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */; };
-		5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */; };
 		5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */; };
 		5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3B1F5144CE00CED242 /* MydayModel.swift */; };
 		5291FE3E1F5149CE00CED242 /* FirstTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */; };
@@ -101,12 +99,10 @@
 		5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyDayViewModel.swift; sourceTree = "<group>"; };
 		5267D6711F76300C002A84C6 /* CalendarViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
 		5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeTableViewModel.swift; sourceTree = "<group>"; };
-		5267D6751F763027002A84C6 /* SettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		5267D6771F76304F002A84C6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5267D6791F76305D002A84C6 /* NotesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
 		526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCourseTableViewCell.swift; sourceTree = "<group>"; };
 		5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPopupViewController.swift; sourceTree = "<group>"; };
-		5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		5291FE3B1F5144CE00CED242 /* MydayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MydayModel.swift; sourceTree = "<group>"; };
 		5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstTableViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +203,6 @@
 				5267D66F1F762FF8002A84C6 /* MyDayViewModel.swift */,
 				5267D6711F76300C002A84C6 /* CalendarViewModel.swift */,
 				5267D6731F76301C002A84C6 /* TimeTableViewModel.swift */,
-				5267D6751F763027002A84C6 /* SettingViewModel.swift */,
 				5267D6771F76304F002A84C6 /* ProfileViewModel.swift */,
 				5267D6791F76305D002A84C6 /* NotesViewModel.swift */,
 				52F2DD7B1F7F661900B7F7AF /* LoginRegViewModel.swift */,
@@ -235,7 +230,6 @@
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
 				526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */,
 				72EB20031F41514E00A09929 /* RegisterViewController.swift */,
-				5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */,
 				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
 				5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */,
 				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
@@ -684,7 +678,6 @@
 				5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */,
 				72EB20041F41514E00A09929 /* RegisterViewController.swift in Sources */,
 				5291FE401F51609E00CED242 /* WeatherCell.swift in Sources */,
-				5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* UserModel.swift in Sources */,
 				5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */,
 				E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */,
@@ -694,7 +687,6 @@
 				52F2DD7C1F7F661900B7F7AF /* LoginRegViewModel.swift in Sources */,
 				52214ABC1F7DDCBE00FC2F86 /* DatabaseManager.swift in Sources */,
 				52DEDB9B1F8793D6002AC7B3 /* AddCourseTableViewController.swift in Sources */,
-				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
 				526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,

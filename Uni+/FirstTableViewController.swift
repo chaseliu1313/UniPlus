@@ -27,7 +27,14 @@ class FirstTableViewController: UITableViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         sideMenu()
     
+        myDayTable.reloadData()
         
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        WeatherModelViewItem.shared.updateWeather()
     }
     
     
@@ -53,6 +60,7 @@ class FirstTableViewController: UITableViewController {
         
         cell.setData(weather: WeatherModelViewItem.shared)
         
+        cell.selectionStyle = .none
         cell.selectionStyle = UITableViewCellSelectionStyle.none
         
         cell.backgroundColor = UIColor.clear
@@ -69,6 +77,9 @@ class FirstTableViewController: UITableViewController {
         cell.Time1.text = TimetableFirstPageViewModel.shared.time1
         cell.time2.text = TimetableFirstPageViewModel.shared.time2
         
+        cell.title.text = "  Upcoming Courses:"
+        cell.selectionStyle = .none
+        
         cell.backgroundColor = UIColor.clear
         return cell
         
@@ -81,6 +92,9 @@ class FirstTableViewController: UITableViewController {
         cell.Time1.text = CalendarFirstPageViewModel.shared.time1
         cell.name2.text = CalendarFirstPageViewModel.shared.name2
         cell.time2.text = CalendarFirstPageViewModel.shared.time2
+        
+        cell.title.text = "  Calender Event:"
+        cell.selectionStyle = .none
         
         cell.backgroundColor = UIColor.clear
         return cell
@@ -96,10 +110,15 @@ class FirstTableViewController: UITableViewController {
         cell.Time1.text = NoteFirstPageViewModel.shared.time1
         cell.name2.text = NoteFirstPageViewModel.shared.name2
         cell.time2.text = NoteFirstPageViewModel.shared.time2
+        cell.title.text = "  Recent Notes:"
+        cell.selectionStyle = .none
         
         return cell
         
         }
+        
+        
+
        
         
         
@@ -111,10 +130,7 @@ class FirstTableViewController: UITableViewController {
         
         if indexPath.row == 1{
             self.performSegue(withIdentifier: "TimetableDetail", sender: self)}
-        else if indexPath.row == 2 {
         
-        self.performSegue(withIdentifier: "CalDetail", sender: self)
-        }
     }
     
     //open side menu

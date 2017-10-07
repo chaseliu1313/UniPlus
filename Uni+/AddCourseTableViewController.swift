@@ -52,9 +52,13 @@ class AddCourseTableViewController: UITableViewController {
             
             else {
                 
-                let date = selectWeekday!
-                let place = self.place.text!
-                let description = self.Coursedescription.text!
+                guard let date = selectWeekday,
+                let place = self.place.text
+                ,let description = self.Coursedescription.text
+                else {
+                 notifyUser(["There was an error adding your course, please try again"])
+                    return
+                }
                 
                 let newCourse = TimeTableViewModel.shared.formCourse(date: date, place: place, startTime: selectStartTime!, endTime: selectEndTime!, description: description)
             
@@ -149,6 +153,28 @@ extension AddCourseTableViewController: UIPickerViewDelegate, UIPickerViewDataSo
             
         }
     }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel = view as? UILabel;
+        
+        if (pickerLabel == nil)
+        {
+            pickerLabel = UILabel()
+            pickerLabel!.textAlignment = NSTextAlignment.center
+            pickerLabel!.textColor = UIColor.white
+        }
+        if  weekdays == pickerView{
+            pickerLabel?.text = TimeTableViewModel.shared.weekdays[row]
+        }else if startTime == pickerView{
+            pickerLabel?.text = TimeTableViewModel.shared.startTime[row]
+            
+        }else{
+            pickerLabel?.text = TimeTableViewModel.shared.endTime[row]
+        }
+        return pickerLabel!
+    }
+    
+    
     
 
 

@@ -233,6 +233,51 @@ import SQLite
         
     }
     
+    func updateUser(Newemail: String, Newname: String,  userID: Int) -> Bool {
+    
+        
+        let filter = self.usersTable.filter(self.id == userID)
+        
+        do
+        {
+        try self.database.run(filter.update(email <- Newemail, name <- Newname))
+        
+            return true
+            
+            
+        }
+        catch
+        {
+        print(error)
+            return false
+        }
+    
+    
+    }
+    
+    func updateUserPassword(Newpassword: String, userID: Int) -> Bool {
+        
+        
+        let filter = self.usersTable.filter(self.id == userID)
+        
+        do
+        {
+            try self.database.run(filter.update(password <- Newpassword))
+            
+            return true
+            
+            
+        }
+        catch
+        {
+            print(error)
+            return false
+        }
+        
+        
+    }
+    
+    
     
     
     //calendar table functions

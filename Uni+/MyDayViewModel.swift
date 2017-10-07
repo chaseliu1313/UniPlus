@@ -12,13 +12,16 @@ import Foundation
 class WeatherModelViewItem {
     
     
+    var tempArray = ["F","C"]
+    var campusArray = ["City Campus", "Bundoora Campus", "Brunswick Campus"]
+    
     static let shared = WeatherModelViewItem()
     
     private init(){
         self.updateWeather()
     }
 
-    var myDay = MydayModel()
+    
     let weatherModel = Weather()
     
     var isCel = true
@@ -37,9 +40,14 @@ class WeatherModelViewItem {
     //load static value from model and retrieve instant value from weather api
     
     func updateWeather(){
-       let u = myDay.getCoordinates()
-        self.campus = myDay.campus
-        self.date = myDay.getCurrentTime()
+        
+        self.campus = MydayModel.shared.campus
+        self.isCel = MydayModel.shared.isCel
+        
+       let u = MydayModel.shared.getCoordinates()
+        
+        self.date = MydayModel.shared.getCurrentTime()
+        
         
     ConnectionManager.getJSON(url: u) { (success, json) in
         
@@ -52,11 +60,10 @@ class WeatherModelViewItem {
             self.icon = self.weatherModel.getIcon(weather: self.weatherDes)
             let temper = weather["apparentTemperature"] as! Double
             
-            self.isCel = self.myDay.isCel
             
             if self.isCel {
             
-            self.temp = String(Int(self.myDay.getCelsius(fara: temper))) + "  °C"
+            self.temp = String(Int(MydayModel.shared.getCelsius(fara: temper))) + "  °C"
             }
             else {
             
@@ -77,13 +84,7 @@ class WeatherModelViewItem {
         
         }
     
-    //update Faraheight or Celsius value to model
-    func updateModel(isCel: Bool){
-        
-        self.isCel = isCel
-        self.myDay.isCel = isCel
-    
-    }
+   
     
     
     }
@@ -238,7 +239,7 @@ class NoteFirstPageViewModel {
     
         if self.notes.count == 0 {
         
-            self.name1 = "You don't have any notes, Go create one!"
+            self.name1 = "     You don't have any notes, Go create one!"
         
         
         }

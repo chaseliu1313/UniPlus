@@ -26,7 +26,7 @@ class WeatherCell: UITableViewCell {
             else {return}
         
        self.campus.text = weatherData.campus
-      self.datentime.text = weatherData.date
+       self.datentime.text = weatherData.date
         self.Temp.text = weatherData.temp
         self.weatherIcon.image = weatherData.icon
         self.weatherDescip.text = weatherData.weatherDes
