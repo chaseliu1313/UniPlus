@@ -179,9 +179,10 @@ extension NoteControllerViewController:  UITableViewDataSource, UITableViewDeleg
         if editingStyle == UITableViewCellEditingStyle.delete{
             
             let note = noteVM.loadedNote[indexPath.row]
+            
             if noteVM.delete(note: note) {
             
-                noteVM.loadedNote.remove(at: indexPath.row)
+              
                
                 self.load()
                 
