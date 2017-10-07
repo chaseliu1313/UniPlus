@@ -30,6 +30,7 @@
 		5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6751F763027002A84C6 /* SettingViewModel.swift */; };
 		5267D6781F76304F002A84C6 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6771F76304F002A84C6 /* ProfileViewModel.swift */; };
 		5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5267D6791F76305D002A84C6 /* NotesViewModel.swift */; };
+		526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */; };
 		5284B12A1F7E8E4B008E6E0D /* RegisterPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */; };
 		5288BF2D1F6F630700AE7255 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */; };
 		5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */; };
@@ -103,6 +104,7 @@
 		5267D6751F763027002A84C6 /* SettingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewModel.swift; sourceTree = "<group>"; };
 		5267D6771F76304F002A84C6 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		5267D6791F76305D002A84C6 /* NotesViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesViewModel.swift; sourceTree = "<group>"; };
+		526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverCourseTableViewCell.swift; sourceTree = "<group>"; };
 		5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPopupViewController.swift; sourceTree = "<group>"; };
 		5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 				5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */,
 				E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */,
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
+				526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */,
 				72EB20031F41514E00A09929 /* RegisterViewController.swift */,
 				5288BF2C1F6F630700AE7255 /* SettingsTableViewController.swift */,
 				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
@@ -693,6 +696,7 @@
 				52DEDB9B1F8793D6002AC7B3 /* AddCourseTableViewController.swift in Sources */,
 				5267D6761F763027002A84C6 /* SettingViewModel.swift in Sources */,
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
+				526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
 				E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */,
 				E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */,

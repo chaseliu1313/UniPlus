@@ -39,7 +39,7 @@ class CouseDetailTableViewController: UITableViewController {
             self.name.text = course.description
             self.location.text = course.place
             self.startTime.text = "\(course.startTime) O'clock"
-            self.endTime.text = "\(course.endTime) + O'clock"
+            self.endTime.text = "\(course.endTime)  O'clock"
             self.weekdays.text = course.date
         
         }
