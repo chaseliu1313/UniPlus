@@ -217,6 +217,8 @@ class TimetableEvent:TimetableDecorator{
     var place:String
     var startTime: Int
     var endTime: Int
+    var detail: Event
+    
     
     
     init(id: Int, date:String, place: String, startTime: Int, endTime: Int, description:String) {
@@ -227,6 +229,8 @@ class TimetableEvent:TimetableDecorator{
         self.startTime = startTime
         self.endTime = endTime
         self.description = description
+        self.detail = Note.init(date: date, description: description)
+        
     }
     
     init(date:String, place: String, startTime: Int, endTime: Int, description:String) {
@@ -237,7 +241,21 @@ class TimetableEvent:TimetableDecorator{
         self.startTime = startTime
         self.endTime = endTime
         self.description = description
+        self.detail = Note.init(date: date, description: description)
     
+    }
+    
+    
+    init(event: Event, place: String, startTime: Int, endTime: Int) {
+        
+        self.detail = event
+        self.date = event.date
+        self.description = event.description
+        self.place = place
+        self.startTime = startTime
+        self.endTime = endTime
+        self.id = 0
+        
     }
     
     func setDescription(input: String) {

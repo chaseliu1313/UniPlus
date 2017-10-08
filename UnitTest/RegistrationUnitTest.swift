@@ -13,6 +13,8 @@ class RegistrationUnitTest: XCTestCase {
     
     var regiVM : RegiViewModel!
     
+    // this test can only succeed once with the same email address as database doesn't accept duplicate value
+    
     override func setUp() {
         super.setUp()
         regiVM = RegiViewModel()
@@ -28,8 +30,8 @@ class RegistrationUnitTest: XCTestCase {
    
     func testRegistration(){
     
-    let name = "Jerry"
-    let email = "Jerry@gamil.com"
+    let name = "Carry"
+    let email = "Carry@gamil.com"
     let password = "123456"
     let confirm = "123456"
         

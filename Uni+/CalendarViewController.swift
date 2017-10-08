@@ -20,7 +20,7 @@ class CalendarViewController: UIViewController {
  
     
 
-    
+    var index : IndexPath?
    
     @IBOutlet weak var menuButton: UIBarButtonItem!
     private var collapseMaster = true
@@ -41,7 +41,7 @@ class CalendarViewController: UIViewController {
         self.calenaerView.scrollToDate(Date.init())
         
         
-       
+
         
     
        //setting navigation bar button and function
@@ -170,7 +170,7 @@ extension CalendarViewController:  JTAppleCalendarViewDataSource{
         
         let parameter = ConfigurationParameters(startDate: startDate, endDate: endDate)
         self.calenaerView.scrollingMode = ScrollingMode.stopAtEachCalendarFrameWidth
-        self.calenaerView.scrollToDate(Date.init())
+//        self.calenaerView.scrollToDate(Date.init())
         
     
        
@@ -201,6 +201,10 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
     func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
         
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier:"Customcell",  for:indexPath)as! CustomCell
+        self.index = indexPath
+        print("index")
+        print(index!)
+        
         cell.dateLabel.text = cellState.text
         if cellState.isSelected{
             cell.selectedView.isHidden = false
@@ -283,6 +287,15 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         alert.addAction(cancelAction)
         self.present(alert, animated: true)
         
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        guard let target = self.index
+            else {
+        return
+        }
+        calenaerView.viewWillTransition(to: size, with: coordinator, focusDateIndexPathAfterRotate: target )
     }
     
 }

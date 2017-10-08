@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -808,7 +809,7 @@
         <!--My Day-->
         <scene sceneID="Beb-Ic-Vpd">
             <objects>
-                <tableViewController id="KxV-L1-q0k" customClass="FirstTableViewController" customModule="Uni_" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="Myday" id="KxV-L1-q0k" customClass="FirstTableViewController" customModule="Uni_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="193" sectionHeaderHeight="28" sectionFooterHeight="28" id="h65-LF-QNs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1097,10 +1098,10 @@
                                 <exclude reference="l4O-ap-DV0"/>
                                 <exclude reference="lWU-BN-xCx"/>
                                 <exclude reference="nhj-lE-UEh"/>
-                                <exclude reference="0Jm-sT-uKI"/>
-                                <include reference="Bf0-ru-SVM"/>
                                 <exclude reference="tKO-RN-0Xc"/>
                                 <exclude reference="uTP-7t-mdW"/>
+                                <exclude reference="0Jm-sT-uKI"/>
+                                <include reference="Bf0-ru-SVM"/>
                             </mask>
                         </variation>
                     </view>
@@ -1794,20 +1795,20 @@
                             <mask key="constraints">
                                 <exclude reference="RTY-oS-vJ8"/>
                                 <exclude reference="TKv-WF-UNb"/>
-                                <exclude reference="lkz-CA-80p"/>
                                 <exclude reference="fm6-Ez-19I"/>
-                                <exclude reference="IiR-Ga-hNQ"/>
-                                <exclude reference="ieC-QA-sZr"/>
+                                <exclude reference="lkz-CA-80p"/>
                                 <exclude reference="B2c-fT-En0"/>
                                 <exclude reference="Vvh-O6-gjo"/>
                                 <exclude reference="rvT-vb-Xm8"/>
+                                <exclude reference="IiR-Ga-hNQ"/>
+                                <exclude reference="ieC-QA-sZr"/>
+                                <exclude reference="rqB-Fm-709"/>
+                                <exclude reference="uDY-Pl-nGW"/>
+                                <exclude reference="utg-g7-rKi"/>
                                 <exclude reference="ium-Ha-m72"/>
                                 <exclude reference="yHX-L6-vxg"/>
                                 <exclude reference="6rC-kg-saT"/>
                                 <exclude reference="GnK-Qs-Y2c"/>
-                                <exclude reference="rqB-Fm-709"/>
-                                <exclude reference="uDY-Pl-nGW"/>
-                                <exclude reference="utg-g7-rKi"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -1819,29 +1820,29 @@
                             <mask key="constraints">
                                 <include reference="RTY-oS-vJ8"/>
                                 <include reference="TKv-WF-UNb"/>
-                                <exclude reference="3xV-0Z-e1M"/>
-                                <include reference="lkz-CA-80p"/>
                                 <include reference="fm6-Ez-19I"/>
                                 <exclude reference="v4T-jh-kFa"/>
-                                <exclude reference="5Vf-ee-c1m"/>
-                                <exclude reference="IiR-Ga-hNQ"/>
-                                <include reference="ieC-QA-sZr"/>
-                                <exclude reference="t2W-g2-I5O"/>
+                                <exclude reference="3xV-0Z-e1M"/>
+                                <include reference="lkz-CA-80p"/>
                                 <include reference="B2c-fT-En0"/>
                                 <exclude reference="NLG-X6-smE"/>
                                 <include reference="Vvh-O6-gjo"/>
                                 <exclude reference="Xmn-jQ-abU"/>
                                 <include reference="rvT-vb-Xm8"/>
                                 <exclude reference="w4L-ll-Im2"/>
-                                <include reference="ium-Ha-m72"/>
-                                <include reference="yHX-L6-vxg"/>
-                                <include reference="6rC-kg-saT"/>
-                                <include reference="GnK-Qs-Y2c"/>
+                                <exclude reference="5Vf-ee-c1m"/>
+                                <exclude reference="IiR-Ga-hNQ"/>
+                                <include reference="ieC-QA-sZr"/>
+                                <exclude reference="t2W-g2-I5O"/>
                                 <exclude reference="0Rh-5f-pn5"/>
                                 <exclude reference="P8L-Xt-0tu"/>
                                 <include reference="rqB-Fm-709"/>
                                 <include reference="uDY-Pl-nGW"/>
                                 <include reference="utg-g7-rKi"/>
+                                <include reference="ium-Ha-m72"/>
+                                <include reference="yHX-L6-vxg"/>
+                                <include reference="6rC-kg-saT"/>
+                                <include reference="GnK-Qs-Y2c"/>
                             </mask>
                         </variation>
                     </view>
@@ -1979,7 +1980,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="252" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dci-6p-kKG" userLabel="name">
-                                                    <rect key="frame" x="194.5" y="6" width="198" height="29.5"/>
+                                                    <rect key="frame" x="193" y="6" width="199.5" height="28.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2006,7 +2007,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMr-t4-mgO" userLabel="location">
-                                                    <rect key="frame" x="197.5" y="7.5" width="193.5" height="30"/>
+                                                    <rect key="frame" x="197.5" y="7" width="193.5" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2065,7 +2066,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="End time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rbq-aK-Oe5">
-                                                    <rect key="frame" x="251.5" y="12" width="123.5" height="19.5"/>
+                                                    <rect key="frame" x="250.5" y="11.5" width="124" height="19"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -2086,11 +2087,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zbF-g3-oYO">
-                                                    <rect key="frame" x="244.5" y="2.5" width="148" height="40.5"/>
+                                                    <rect key="frame" x="243.5" y="1.5" width="149" height="41"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                                 </pickerView>
                                                 <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TAs-l6-sJW">
-                                                    <rect key="frame" x="-0.5" y="-4" width="142" height="53.5"/>
+                                                    <rect key="frame" x="-2" y="-5" width="143.5" height="54.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 </pickerView>
                                             </subviews>

@@ -43,7 +43,7 @@ class SecondViewController: UIViewController {
         self.loadCorriluar()
        curriculaTable.curricula = self.loadCurricular
         
-        curriculaTable.layoutSubviews()
+        curriculaTable.drawCurricula()
 
         //customize timetable
         curriculaTable.bgColor = UIColor(red: 0.94, green: 0.94, blue: 0.94, alpha: 1.0)
@@ -71,7 +71,7 @@ class SecondViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
     
         self.loadCorriluar()
-        curriculaTable.layoutSubviews()
+        curriculaTable.drawCurricula()
     }
 
     func loadCorriluar(){

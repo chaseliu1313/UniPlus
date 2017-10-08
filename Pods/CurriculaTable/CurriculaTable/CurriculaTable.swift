@@ -172,7 +172,7 @@ public class CurriculaTable: UIView {
         drawCurricula()
     }
     
-    private func drawCurricula() {
+    public func drawCurricula() {
         for subview in subviews {
             if !(subview is UICollectionView) {
                 subview.removeFromSuperview()

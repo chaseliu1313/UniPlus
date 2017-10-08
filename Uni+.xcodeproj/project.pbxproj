@@ -32,6 +32,7 @@
 		526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */; };
 		526D9CA11F8900B00045766A /* RegistrationUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9CA01F8900B00045766A /* RegistrationUnitTest.swift */; };
 		526D9CA51F89090A0045766A /* TableViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9CA41F89090A0045766A /* TableViewTest.swift */; };
+		526D9CA71F8909730045766A /* DependencyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526D9CA61F8909730045766A /* DependencyTest.swift */; };
 		5284B12A1F7E8E4B008E6E0D /* RegisterPopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */; };
 		5288BF2F1F6F631800AE7255 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */; };
 		5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5291FE3B1F5144CE00CED242 /* MydayModel.swift */; };
@@ -43,7 +44,6 @@
 		52DEDBA51F87A9A6002AC7B3 /* CouseDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */; };
 		52F2DD7C1F7F661900B7F7AF /* LoginRegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F2DD7B1F7F661900B7F7AF /* LoginRegViewModel.swift */; };
 		72EB20021F414E5000A09929 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB20011F414E5000A09929 /* LoginViewController.swift */; };
-		72EB20041F41514E00A09929 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72EB20031F41514E00A09929 /* RegisterViewController.swift */; };
 		E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA83491F3558BA0030E7AA /* AppDelegate.swift */; };
 		E7EA834E1F3558BA0030E7AA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */; };
 		E7EA83511F3558BA0030E7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EA834F1F3558BA0030E7AA /* Main.storyboard */; };
@@ -114,6 +114,7 @@
 		526D9C941F88E91D0045766A /* Uni+Tests1.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uni+Tests1.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		526D9CA01F8900B00045766A /* RegistrationUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationUnitTest.swift; sourceTree = "<group>"; };
 		526D9CA41F89090A0045766A /* TableViewTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewTest.swift; sourceTree = "<group>"; };
+		526D9CA61F8909730045766A /* DependencyTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyTest.swift; sourceTree = "<group>"; };
 		5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPopupViewController.swift; sourceTree = "<group>"; };
 		5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		5291FE3B1F5144CE00CED242 /* MydayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MydayModel.swift; sourceTree = "<group>"; };
@@ -128,7 +129,6 @@
 		689F2D073E8B6B2B6E53735E /* Pods-Uni+UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+UITests/Pods-Uni+UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6E81B23F0B3189EEFEA9B9D4 /* Pods_Uni_UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		72EB20011F414E5000A09929 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		72EB20031F41514E00A09929 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		7626C18921CABF918791BE9A /* Pods-Uni+Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+Tests/Pods-Uni+Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		8277BABAB97438E7FA3A1F66 /* Pods-Uni+.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Uni+.release.xcconfig"; path = "Pods/Target Support Files/Pods-Uni+/Pods-Uni+.release.xcconfig"; sourceTree = "<group>"; };
 		BF9CDD7068A9B3EBC6F8E256 /* Pods_Uni_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Uni_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -246,9 +246,10 @@
 				5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */,
 				5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */,
 				E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */,
+				52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */,
+				521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */,
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
 				526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */,
-				72EB20031F41514E00A09929 /* RegisterViewController.swift */,
 				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
 				5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */,
 				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
@@ -259,10 +260,8 @@
 				521E90AB1F5298E600BAE5A6 /* CustomCell.swift */,
 				525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */,
 				521BE7921F81B609008636DC /* addClendarEventViewController.swift */,
-				521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */,
 				521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */,
 				5216C5231F84A9A400102F23 /* CalenderDetailTableViewController.swift */,
-				52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */,
 				52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */,
 				525CB0841F6E356F0036F2A1 /* SWViewController */,
 			);
@@ -334,6 +333,7 @@
 				E8A363E91F869B700055F89D /* UnitTest.swift */,
 				526D9CA01F8900B00045766A /* RegistrationUnitTest.swift */,
 				526D9CA41F89090A0045766A /* TableViewTest.swift */,
+				526D9CA61F8909730045766A /* DependencyTest.swift */,
 				E8A363EB1F869B700055F89D /* Info.plist */,
 			);
 			path = UnitTest;
@@ -736,7 +736,6 @@
 				524175371F762E9500FCBE34 /* ConnectionManager.swift in Sources */,
 				52B0C3691F6F813000DC8672 /* SWRevealViewController.m in Sources */,
 				5267D67A1F76305D002A84C6 /* NotesViewModel.swift in Sources */,
-				72EB20041F41514E00A09929 /* RegisterViewController.swift in Sources */,
 				5291FE401F51609E00CED242 /* WeatherCell.swift in Sources */,
 				521E90B01F52DCD000BAE5A6 /* UserModel.swift in Sources */,
 				5214A04D1F77A3480090BD4F /* EventTableViewCell.swift in Sources */,
@@ -780,6 +779,7 @@
 			files = (
 				526D9CA51F89090A0045766A /* TableViewTest.swift in Sources */,
 				E8A363EA1F869B700055F89D /* UnitTest.swift in Sources */,
+				526D9CA71F8909730045766A /* DependencyTest.swift in Sources */,
 				526D9CA11F8900B00045766A /* RegistrationUnitTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1079,6 +1079,7 @@
 				526D9C9D1F88E91D0045766A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7EA83411F3558B90030E7AA /* Build configuration list for PBXProject "Uni+" */ = {
 			isa = XCConfigurationList;

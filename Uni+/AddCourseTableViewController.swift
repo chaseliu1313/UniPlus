@@ -29,6 +29,7 @@ class AddCourseTableViewController: UITableViewController {
         addCourse.backgroundView = UIImageView(image: UIImage(named: "blueBackGround"))
         self.initiatePickers()
          addCourse.separatorColor = UIColor.clear
+        UITableViewCell.appearance().backgroundColor = UIColor.clear
      
     }
     

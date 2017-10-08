@@ -219,6 +219,8 @@ class NoteFirstPageViewModel {
     {
         
         let load =  DbManager.shared.loadNote(id: self.userID)
+        //let load = NoteViewModel().loadedNote
+        
         if load.count <= 2 {
         
             self.notes = load

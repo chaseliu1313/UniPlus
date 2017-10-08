@@ -15,7 +15,7 @@ class FirstTableViewController: UITableViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
     
-   
+    var refresh = UIRefreshControl()
     
 
     override func viewDidLoad() {
@@ -26,8 +26,15 @@ class FirstTableViewController: UITableViewController {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         sideMenu()
-    
+        
+       
+        refresh.addTarget(self, action: #selector(FirstTableViewController.refreshData), for: .valueChanged)
+        myDayTable.refreshControl = refresh
+        
+        
         myDayTable.reloadData()
+        
+        
         
     }
     
@@ -132,6 +139,21 @@ class FirstTableViewController: UITableViewController {
             self.performSegue(withIdentifier: "TimetableDetail", sender: self)}
         
     }
+    
+    //refreshing function
+    func refreshData(){
+    
+    WeatherModelViewItem.shared.updateWeather()
+    TimetableFirstPageViewModel.shared.getCoursesOnDate()
+    NoteFirstPageViewModel.shared.loadNotes()
+    CalendarFirstPageViewModel.shared.loadCal()
+    myDayTable.reloadData()
+    refresh.endRefreshing()
+    
+    
+    }
+    
+    
     
     //open side menu
     func sideMenu()

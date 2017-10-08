@@ -62,7 +62,7 @@ extension TimeTablePopoverViewController: UITableViewDelegate, UITableViewDataSo
         cell.name.text = TimeTableViewModel.shared.loadCourses[indexPath.row].description
         cell.place.text = TimeTableViewModel.shared.loadCourses[indexPath.row].place
         
-        cell.time.text = "On\(TimeTableViewModel.shared.loadCourses[indexPath.row].date)  From: \(TimeTableViewModel.shared.loadCourses[indexPath.row].startTime)  To: \(TimeTableViewModel.shared.loadCourses[indexPath.row].endTime)"
+        cell.time.text = "On \(TimeTableViewModel.shared.loadCourses[indexPath.row].date)  From: \(TimeTableViewModel.shared.loadCourses[indexPath.row].startTime)  To: \(TimeTableViewModel.shared.loadCourses[indexPath.row].endTime)"
         
         
       
