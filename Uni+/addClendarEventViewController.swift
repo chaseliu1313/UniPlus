@@ -57,9 +57,10 @@ UIViewController {
         }
     }
     
+    //customized alert view function
     func notifyUser( _ message: [String] ) -> Void
     {
-        let meg: String = message[0]
+        let meg: String = "\(message[0])"
         let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(cancelAction)

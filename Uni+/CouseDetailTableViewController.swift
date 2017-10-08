@@ -62,7 +62,7 @@ class CouseDetailTableViewController: UITableViewController {
         if let id = self.courseID {
         
             if TimeTableViewModel.shared.deleteCouse(couseID: id) {
-            self.notifyUser(["Course deleted!"])
+            self.notifyUser(["Course deleted!","Your Timetable will be updated next time login"])
             
             }
             else {self.notifyUser(["Deletion faild"])}
@@ -82,8 +82,17 @@ class CouseDetailTableViewController: UITableViewController {
     //customized alert view function
     func notifyUser( _ message: [String] ) -> Void
     {
-        let meg: String = message[0]
-        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        var messageForPrint = ""
+        
+        for meg in message {
+            
+            messageForPrint.append("\(meg) \n")
+        
+        
+        }
+        
+        
+        let alert = UIAlertController(title: "Uni+", message: messageForPrint, preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         self.present(alert, animated: true)

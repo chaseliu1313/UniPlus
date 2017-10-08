@@ -4,7 +4,8 @@
 //
 //  Created by Chase Liu on 5/8/17.
 //  Copyright © 2017 Chase Liu. All rights reserved.
-//
+// Timetable view controller
+
 
 import UIKit
 import CurriculaTable
@@ -15,9 +16,11 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var curriculaTable: CurriculaTable!
     
+    // CorricularTable required value
     var loadCurricular :[CurriculaTableItem] = []
     var courseID: Int = 0
     
+    //empty handler for tabbing
     var handler  = {(curriculum: CurriculaTableItem) in
         
         
@@ -70,6 +73,11 @@ class SecondViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
     
+        self.loadCorriluar()
+        curriculaTable.drawCurricula()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
         self.loadCorriluar()
         curriculaTable.drawCurricula()
     }

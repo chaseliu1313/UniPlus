@@ -142,10 +142,7 @@ class CalendarViewController: UIViewController {
         
     }
     
-    
-  
-    
-    
+   
   
     
 }
@@ -202,8 +199,7 @@ extension CalendarViewController: JTAppleCalendarViewDelegate{
         
         let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier:"Customcell",  for:indexPath)as! CustomCell
         self.index = indexPath
-        print("index")
-        print(index!)
+        
         
         cell.dateLabel.text = cellState.text
         if cellState.isSelected{

@@ -193,7 +193,8 @@ import SQLite
         
         do{
             try self.database.run(insert)
-            print("inserted \(name) and \(email)")
+          
+            
             return true
             
         }

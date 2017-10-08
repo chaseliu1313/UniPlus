@@ -65,7 +65,7 @@ class AddCourseTableViewController: UITableViewController {
             
                 if TimeTableViewModel.shared.addCouse(couse: newCourse){
                 
-                 notifyUser(["Yeah! New Course added!"])
+                 notifyUser(["Yeah! New Course added!","Your timetable will be updated next time login"])
                     
                 }
                 else {
@@ -193,8 +193,17 @@ extension AddCourseTableViewController: UIPickerViewDelegate, UIPickerViewDataSo
     //customized alert view function
     func notifyUser( _ message: [String] ) -> Void
     {
-        let meg: String = message[0]
-        let alert = UIAlertController(title: "Uni+", message: meg, preferredStyle: UIAlertControllerStyle.alert)
+        var messageForPrint = ""
+        
+        for meg in message {
+            
+            messageForPrint.append("\(meg) \n")
+            
+            
+        }
+        
+        
+        let alert = UIAlertController(title: "Uni+", message: messageForPrint, preferredStyle: UIAlertControllerStyle.alert)
         let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(cancelAction)
         self.present(alert, animated: true)

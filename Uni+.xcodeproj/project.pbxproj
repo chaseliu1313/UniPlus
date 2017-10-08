@@ -50,7 +50,6 @@
 		E7EA83531F3558BA0030E7AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7EA83521F3558BA0030E7AA /* Assets.xcassets */; };
 		E7EA83561F3558BA0030E7AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7EA83541F3558BA0030E7AA /* LaunchScreen.storyboard */; };
 		E7EA836C1F3558BA0030E7AA /* Uni_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EA836B1F3558BA0030E7AA /* Uni_UITests.swift */; };
-		E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */; };
 		E85701071F7B7F1600B805A2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85701061F7B7F1600B805A2 /* SettingViewController.swift */; };
 		E8A363EA1F869B700055F89D /* UnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A363E91F869B700055F89D /* UnitTest.swift */; };
 /* End PBXBuildFile section */
@@ -144,7 +143,6 @@
 		E7EA83671F3558BA0030E7AA /* Uni+UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Uni+UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7EA836B1F3558BA0030E7AA /* Uni_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uni_UITests.swift; sourceTree = "<group>"; };
 		E7EA836D1F3558BA0030E7AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		E85701061F7B7F1600B805A2 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		E8A363E71F869B700055F89D /* UnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A363E91F869B700055F89D /* UnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTest.swift; sourceTree = "<group>"; };
@@ -246,23 +244,22 @@
 				5284B1291F7E8E4B008E6E0D /* RegisterPopupViewController.swift */,
 				5291FE3D1F5149CE00CED242 /* FirstTableViewController.swift */,
 				E7EA834D1F3558BA0030E7AA /* SecondViewController.swift */,
-				52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */,
 				521E90A71F52928C00BAE5A6 /* CalendarViewController.swift */,
+				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
 				5214A0481F7743EC0090BD4F /* TimeTablePopoverViewController.swift */,
+				52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */,
+				52DEDB9A1F8793D6002AC7B3 /* AddCourseTableViewController.swift */,
 				526D9C8E1F8850980045766A /* PopoverCourseTableViewCell.swift */,
+				521BE7921F81B609008636DC /* addClendarEventViewController.swift */,
+				5216C5231F84A9A400102F23 /* CalenderDetailTableViewController.swift */,
+				521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */,
 				E85701061F7B7F1600B805A2 /* SettingViewController.swift */,
 				5288BF2E1F6F631800AE7255 /* ProfileTableViewController.swift */,
-				5291FE411F51758100CED242 /* NoteControllerViewController.swift */,
-				521E90AD1F52B10600BAE5A6 /* DetialViewController.swift */,
-				E85701041F7B6F7700B805A2 /* SettingTableViewCell.swift */,
 				5214A04C1F77A3480090BD4F /* EventTableViewCell.swift */,
 				5291FE3F1F51609E00CED242 /* WeatherCell.swift */,
 				521E90AB1F5298E600BAE5A6 /* CustomCell.swift */,
 				525CB07C1F6E04D00036F2A1 /* SideMenuTableViewController.swift */,
-				521BE7921F81B609008636DC /* addClendarEventViewController.swift */,
 				521BE7941F81EEEC008636DC /* CalendarEventTableViewCell.swift */,
-				5216C5231F84A9A400102F23 /* CalenderDetailTableViewController.swift */,
-				52DEDBA41F87A9A6002AC7B3 /* CouseDetailTableViewController.swift */,
 				525CB0841F6E356F0036F2A1 /* SWViewController */,
 			);
 			name = Controller;
@@ -749,7 +746,6 @@
 				5291FE421F51758100CED242 /* NoteControllerViewController.swift in Sources */,
 				526D9C8F1F8850980045766A /* PopoverCourseTableViewCell.swift in Sources */,
 				521E90AE1F52B10600BAE5A6 /* DetialViewController.swift in Sources */,
-				E85701051F7B6F7700B805A2 /* SettingTableViewCell.swift in Sources */,
 				E7EA834A1F3558BA0030E7AA /* AppDelegate.swift in Sources */,
 				525CB0881F6EA7FC0036F2A1 /* StatusManager.swift in Sources */,
 				5291FE3C1F5144CF00CED242 /* MydayModel.swift in Sources */,

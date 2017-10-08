@@ -16,7 +16,7 @@ class CalenderDetailTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("detail: \(date)")
+       
          detailTable.reloadData()
         detailTable.backgroundView = UIImageView(image: UIImage(named: "purpleBackGround"))
      CalendarViewModel.shared.loadCalendar(date: date)

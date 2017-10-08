@@ -99,7 +99,7 @@ class TimetableFirstPageViewModel {
         
         self.getCoursesOnDate()
         self.setCellData()
-        
+        print(courses.count)
     }
     
     var courses:[TimetableEvent]  = []

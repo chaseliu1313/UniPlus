@@ -52,7 +52,7 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
         
         MydayModel.shared.setCampus(campus: setCam)
             
-            print(MydayModel.shared.campus)
+          
             if setWeather == "C" {
             
                 MydayModel.shared.isCel = true
@@ -61,7 +61,7 @@ class SettingViewController: UIViewController,UIPickerViewDataSource, UIPickerVi
             else {
             
             MydayModel.shared.isCel = false
-                print(MydayModel.shared.isCel)
+                
                 
             }
             self.notifyUser(["Settings updated, will be applied next time log in"])

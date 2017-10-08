@@ -16,9 +16,10 @@ class NoteControllerViewController: UIViewController {
     var noteVM = NoteViewModel()
     
     
-    var selectedRow: Int = -1
+    var selectedRow: Int = 0
     var newRowText: String = ""
     var data:[String] = ["row1" ,"row2"]
+    var seletedNoteID : Int!
     
     
     override func viewDidLoad() {
@@ -108,11 +109,17 @@ class NoteControllerViewController: UIViewController {
         
         let detailView: DetialViewController = segue.destination as! DetialViewController
         
-        selectedRow = noteVM.loadedNote.count - 1
+        if noteVM.loadedNote.count == 0 {
+        
+            detailView.setText(input: "New Note")
+        
+        }
+        else {
+        
+            print("error row\(selectedRow)")
         detailView.masterView = self
         detailView.setText(input: noteVM.loadedNote[selectedRow].description)
-        print(noteVM.loadedNote[selectedRow].id)
-        
+        }
     }
     
    
@@ -168,6 +175,9 @@ extension NoteControllerViewController:  UITableViewDataSource, UITableViewDeleg
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.newRowText = noteVM.loadedNote[indexPath.row].description
+        
+        self.selectedRow = indexPath.row
+        
         self.performSegue(withIdentifier: "Detail", sender: nil)
         
         

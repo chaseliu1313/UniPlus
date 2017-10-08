@@ -1,7 +1,7 @@
 //
 //  FirstTableViewController.swift
 //  Uni+
-//
+//  MyDay viewController
 //  Created by Chase on 26/8/17.
 //  Copyright © 2017 Chase Liu. All rights reserved.
 //
@@ -36,6 +36,11 @@ class FirstTableViewController: UITableViewController {
         
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        myDayTable.reloadData()
     }
     
     
@@ -165,7 +170,6 @@ class FirstTableViewController: UITableViewController {
         
             menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
             revealViewController().rearViewRevealWidth = 275
-            //revealViewController().rightViewRevealWidth = 160
             
             view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
             
